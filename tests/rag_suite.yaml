@@ -1,0 +1,79 @@
+# =============================================================================
+# Balbharati RAG — Regression Suite
+# =============================================================================
+# Run with:
+#   ./run.sh rag --suite tests/rag_suite.yaml
+#
+# Each query can have:
+#   query:              (required) the STT-style input to test
+#   expected_qa_id:     (optional) the qa_id from knowledgebase.json that SHOULD
+#                       be chosen. If set, PASS/FAIL is determined by match.
+#   expect_fallback:    (optional) true = expect a fallback response,
+#                       false = expect a real answer. Mutually exclusive with
+#                       expected_qa_id in practice.
+#   description:        (optional) human-readable note shown in the report
+#
+# If neither expected_qa_id nor expect_fallback is set, the query runs but
+# is counted as "no-expect" (informational only).
+# =============================================================================
+
+queries:
+  # ── Clean Devanagari queries (should always pass) ──────────────────────
+  - query: "प्रवेश कशी घ्यायची"
+    expected_qa_id: "qa_0"
+    description: "Admission process — clean Devanagari"
+
+  - query: "फी किती आहे"
+    expected_qa_id: "qa_2"
+    description: "Fees query — Devanagari"
+
+  - query: "परीक्षा कधी आहे"
+    expected_qa_id: "qa_1"
+    description: "Exam schedule — Devanagari"
+
+  - query: "पुस्तके कुठे मिळतात"
+    expected_qa_id: "qa_3"
+    description: "Books location — Devanagari"
+
+  - query: "नमस्कार"
+    expected_qa_id: "qa_4"
+    description: "Greeting — Devanagari"
+
+  # ── STT noise cases (should still resolve correctly) ───────────────────
+  - query: "Thank you for watching. प्रवेश कशी घ्यायची"
+    expected_qa_id: "qa_0"
+    description: "Whisper hallucination prefix + admission query"
+
+  - query: "[noise] fees किती आहे [music]"
+    expected_qa_id: "qa_2"
+    description: "Bracketed noise + mixed-script fees query"
+
+  - query: "uh, um, हम्म, मला admission प्रक्रिया काय आहे"
+    expected_qa_id: "qa_0"
+    description: "Filler-heavy admission query"
+
+  - query: "aaa शिवाजी महाराज कोणत्या काळात झाले"
+    expected_qa_id: "qa_102"
+    description: "Repeated-char noise + Shivaji Maharaj history query"
+
+  - query: "राज़ा आणि राणी"
+    description: "Hindi nukta leakage (राज़ → राज) — no expected match"
+    # no expected_qa_id: informational only
+
+  # ── Garbage inputs (should fall back) ──────────────────────────────────
+  - query: "Thank you for watching. Please subscribe."
+    expect_fallback: true
+    description: "Pure Whisper hallucination — should be garbage-detected"
+
+  - query: ""
+    expect_fallback: true
+    description: "Empty input — should be garbage-detected"
+
+  - query: "?, ।।  ..."
+    expect_fallback: true
+    description: "Punctuation only — should be garbage-detected"
+
+  # ── Out-of-KB query (fallback expected via CRAG-lite gate or LLM) ──────
+  - query: "मला मुंबईत हवाई वाहतूक कशी करायची आहे"
+    expect_fallback: true
+    description: "Out-of-KB query (air travel to Mumbai) — should fall back"

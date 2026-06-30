@@ -1,0 +1,117 @@
+# =============================================================
+# Balbharati Marathi Voice-Agent RAG — Configuration
+# =============================================================
+# Target: Raspberry Pi 5 (8GB), serial kiosk mode, 2-5s latency.
+# LLM:    Qwen3-0.8B-Instruct-GGUF served via llama-server.
+# =============================================================
+
+# ---------- llama-server endpoint (OpenAI-compatible) ----------
+llm:
+  base_url: "http://127.0.0.1:8080/v1"
+  api_key: "not-needed"           # llama-server ignores this
+  model:   "qwen3-0.8b-instruct"  # name as registered in llama-server
+  # Generation params (tuned for factual RAG answers)
+  temperature: 0.1
+  top_p: 0.9
+  max_tokens: 220                 # ~3-4 sentences in Marathi
+  timeout_s: 30.0                  # hard timeout — fail fast on Pi
+  retries: 1                      # one retry on transient failure
+  retry_backoff_ms: 250
+
+# ---------- Embedder (MuRIL small, ~110MB) ----------
+embedder:
+  # HuggingFace model id (sentence-transformers compatible)
+  # model_id: "sentence-transformers/muril-base-paraphrase-v1"
+  # Fallback (smaller, faster) — uncomment if MuRIL is too heavy:
+  model_id: "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+  device: "cpu"                   # Pi has no GPU
+  batch_size: 32                  # for one-time index build
+  normalize: true                 # L2-normalize for cosine via dot product
+  max_seq_length: 64              # Marathi questions are short
+  cache_dir: "./models"           # local model cache (avoid re-download)
+
+# ---------- Knowledge base ----------
+kb:
+  path: "./kb/knowledgebase.json"
+  index_cache_dir: "./kb/index_cache"
+  rebuild: false                  # force rebuild on startup if true
+
+# ---------- Retrieval ----------
+retrieval:
+  # Per-QA-pair document = canonical question + all variants, newline-joined
+  # (this maximizes recall because Marathi phrasing varies wildly)
+  doc_strategy: "question_plus_variants"
+
+  # BM25 params — tuned for Indic languages (k1 smaller, b smaller because
+  # Marathi questions are short and we don't want length to dominate)
+  bm25:
+    k1: 1.2
+    b: 0.55
+    # Indic-aware tokenizer (see src/tokenize.py). DO NOT use plain
+    # whitespace splitting — it cripples Devanagari recall badly.
+    tokenizer: "indic_syllable"
+
+  # Dense retrieval
+  dense:
+    # How to aggregate per-variant embeddings into one per-QA-pair vector.
+    # "max" = take max across variants per dimension — best for paraphrase recall
+    pool: "max"
+
+  # Fusion
+  fusion:
+    method: "rrf"                 # Reciprocal Rank Fusion
+    k: 60                          # standard RRF constant
+    bm25_weight: 1.0
+    dense_weight: 1.0
+
+  # Score-weighted selection (used when --skip-llm is set)
+  selection:
+    bm25_weight: 0.4
+    dense_weight: 0.6
+    min_score: 0.2               # below this → fallback
+
+  # Cross-encoder reranker (used when --skip-llm is set)
+  reranker:
+    model_id: "Alibaba-NLP/gte-multilingual-reranker-base"
+    threshold: 1.0
+
+  # Top-K shortlist sent to LLM / reranker
+  top_k: 5
+
+  # CRAG-lite confidence gate (no extra LLM call).
+  # RRF score math (k=60, 2 retrievers):
+  #   max possible = 1/61 + 1/61 = 0.0328  (both retrievers rank doc #1)
+  #   strong agree = 1/61 + 1/65 = 0.0318  (both in top-5)
+  #   one-sided     = 1/61 + 0     = 0.0164 (only one retriever finds it)
+  #   weak          = 1/91 + 0     = 0.0110 (one retriever ranks ~30th)
+  #
+  # If top-1 fused score < threshold_low  -> immediate "no answer" fallback
+  # If top-1 fused score in [low, high)   -> LLM still sees context but with
+  #                                          "may not be relevant" instruction
+  # If top-1 fused score >= high          -> normal LLM answer
+  confidence:
+    threshold_low: 0.011           # below this = neither retriever found it strongly
+    threshold_high: 0.025          # above this = both retrievers agree top-K
+
+# ---------- Cache ----------
+cache:
+  # LRU answer cache — short queries often repeat ("fees kiti aahe", "namaskar")
+  enabled: true
+  max_size: 256
+  # Cache key = normalized query (after normalization, before retrieval)
+  key: "normalized_query"
+
+# ---------- Pipeline behavior ----------
+pipeline:
+  # Strict no-hallucination: if LLM says "I don't know", respect it
+  respect_llm_dont_know: true
+  # Max wall-clock budget for the whole pipeline (seconds)
+  latency_budget_s: 5.0
+  # If pipeline exceeds budget, return fallback immediately
+  fallback_message_mr: "माफ करा, मला या प्रश्नाची माहिती माहित नाही. कृपया दुसरा प्रश्न विचारा किंवा शाळेच्या कार्यालयात संपर्क करा."
+
+# ---------- Logging ----------
+logging:
+  level: "INFO"                   # DEBUG | INFO | WARNING | ERROR
+  file: "./logs/pipeline.log"
+  json: true                      # structured JSON logs for kiosk monitoring

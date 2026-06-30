@@ -1,0 +1,3244 @@
+{
+  "metadata": {
+    "name": "Balbharati Marathi FAQ + Class 4 Parisar Abhyas",
+    "version": "2.2",
+    "language": "Marathi (mixed: Roman questions, Devanagari answers)",
+    "description": "Combined knowledge base: school FAQ + Class 4 Parisar Abhyas. Questions and variants in Romanized Marathi (Latin alphabet transliteration); answers in Devanagari Marathi.",
+    "instructions": "Each entry has multiple question variations and one answer. Add as many variations as possible for better matching.",
+    "sources": [
+      "knowledgebase.json v1.0 - School FAQ (Roman script Marathi)",
+      "Class4ParisarAbhyas.json - Itihas/Parisar Abhyas Chapter (Devanagari Marathi)"
+    ],
+    "total_entries": 208,
+    "script": "Questions: Roman (Latin); Answers: Devanagari",
+    "schema": "qa_pairs/v1"
+  },
+  "qa_pairs": [
+    {
+      "question": "admission kashi ghyaychi",
+      "variants": [
+        "pravesh kasa ghyaycha",
+        "admission process kay aahe",
+        "admission sathi kay karayche",
+        "nondani kashi karaychi",
+        "mulala dakhla kasa karaycha",
+        "प्रवेश कशी घ्यायची",
+        "प्रवेश कसा घ्यायचा",
+        "प्रवेश प्रोकेस्स काय आहे",
+        "प्रवेश साठी काय करायचे",
+        "नोन्दनि कशी करायची",
+        "मुलल दाखला कसा करायचा"
+      ],
+      "answer": {
+        "mr": "अ‍ॅडमिशनसाठी ऑफिसमध्ये या. आधार कार्ड, जन्म दाखला, आणि मागील वर्गाचा निकाल आणा. जूनमध्ये अ‍ॅडमिशन सुरू होते."
+      },
+      "category": "admission"
+    },
+    {
+      "question": "pariksha kadhi aahe",
+      "variants": [
+        "exam kadhi aahe",
+        "pariksha schedule kay aahe",
+        "exam kadhi suroo hotat",
+        "test kadhi ahe",
+        "paper kadhi aahet",
+        "परीक्षा कधी आहे",
+        "परीक्षा स्चेदुले काय आहे",
+        "परीक्षा कधी सुरू होतात",
+        "चाचणी कधी आहे",
+        "प्रश्नपत्रिका कधी आहेत"
+      ],
+      "answer": {
+        "mr": "पहिली परीक्षा ऑक्टोबरमध्ये आणि दुसरी परीक्षा मार्चमध्ये होते. युनिट टेस्ट दर महिन्याला होतात."
+      },
+      "category": "exam"
+    },
+    {
+      "question": "fees kiti aahe",
+      "variants": [
+        "shulka kiti aahe",
+        "kitni fees bharne lagtat",
+        "school fee kay aahe",
+        "fees kiti rupaye aahe",
+        "shulka kiti bharayche",
+        "फी किती आहे",
+        "शुल्क किती आहे",
+        "कित्नि फी भर्ने लग्तत",
+        "स्कूल फी काय आहे",
+        "फी किती रुपये आहे",
+        "शुल्क किती भरय्चे"
+      ],
+      "answer": {
+        "mr": "वार्षिक शुल्क ५००० रुपये आहे. ते दोन हप्त्यांमध्ये भरता येते. पहिला हप्ता जुलैमध्ये आणि दुसरा डिसेंबरमध्ये."
+      },
+      "category": "fees"
+    },
+    {
+      "question": "pustak kuthe miltat",
+      "variants": [
+        "books kuthe gheayche",
+        "pathyapustak kuthe bhetat",
+        "balbharati books kuthe miltat",
+        "pustak kadhi miltat",
+        "kitab kahan milenge",
+        "पुस्तक कुठे मिळतात",
+        "बूक्स कुठे घेअय्चे",
+        "पथ्यपुस्तक कुठे भेतत",
+        "बालभारती बूक्स कुठे मिळतात",
+        "पुस्तक कधी मिळतात",
+        "कितब कहन मिलेन्गे"
+      ],
+      "answer": {
+        "mr": "बालभारतीची पुस्तके शाळेमध्ये मिळतात किंवा balbharati.in वर ऑनलाइन मागवता येतात. जूनमध्ये नवीन पुस्तके येतात."
+      },
+      "category": "books"
+    },
+    {
+      "question": "namaskar",
+      "variants": [
+        "namaste",
+        "kasa aahat",
+        "kashi aahat",
+        "hi",
+        "hello",
+        "नमस्कार",
+        "नमस्ते",
+        "कसा आहत",
+        "कशी आहत",
+        "ही",
+        "हेल्लो"
+      ],
+      "answer": {
+        "mr": "नमस्कार! मी तुम्हाला कशात मदत करू शकतो? शाळेबद्दल कोणताही प्रश्न विचारा."
+      },
+      "category": "greeting"
+    },
+    {
+      "question": "Shivaji maharaja konatya kalata jhale?",
+      "variants": [
+        "Shivaji maharajancha kala konata hota?",
+        "Te konatya yugata jhale?",
+        "Shivaji maharaja madhyayugata hote ka?",
+        "In which period was Shivaji Maharaj born?",
+        "शिवाजी महाराज कोणत्या कळतात झाले",
+        "शिवाजी महाराजांचा कल कोणता होता",
+        "ते कोणत्या युगत झाले",
+        "शिवाजी महाराज मध्ययुगत होते का",
+        "पेरिओद शिवाजी महाराज बोर्न"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराज मध्ययुगीन काळात झाले. तो काळ राजेशाही पद्धतीचा होता."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Madhyayugina kalata rajyapaddhati kashi hoti?",
+      "variants": [
+        "Tya kalata rajya kase chalata hote?",
+        "Madhyayugata kona rajya karata hote?",
+        "Tya veli lokashahi hoti ka?",
+        "What was the ruling system in medieval times?",
+        "मध्ययुगिन कळतात रज्यपद्धति कशी होती",
+        "त्या कळतात राज्य कसे चलत होते",
+        "मध्ययुगत कोण राज्य करता होते",
+        "त्या वेलि लोकशहि होती का",
+        "रुलिन्ग स्य्स्तेम मेदिएवल तिमेस"
+      ],
+      "answer": {
+        "mr": "त्या काळात राजेशाही होती. राजा सर्व निर्णय घेत असे आणि लोकांना त्याचे पालन करावे लागत असे."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanpurvi maharashhtrata svarajya hote ka?",
+      "variants": [
+        "Shivaji maharajanpurvi svarajya hote ka?",
+        "Maharashhtrata adhi svatahche rajya hote ka?",
+        "Before Shivaji, did Maharashtra have Swarajya?",
+        "शिवाजी महरजन्पुर्वि महाराष्ट्रात स्वराज्य होते का",
+        "शिवाजी महरजन्पुर्वि स्वराज्य होते का",
+        "महाराष्ट्रात अधि स्वतह्चे राज्य होते का",
+        "बेफोरे शिवाजी, महाराष्ट्र स्वराज्य"
+      ],
+      "answer": {
+        "mr": "नाही, शिवाजी महाराजांपूर्वी महाराष्ट्रात स्वराज्य नव्हते. परकीय सत्तांचा कारभार चालत होता."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya mhanaje kaya?",
+      "variants": [
+        "Svarajyachi vyakhya kaya ahe?",
+        "Svarajya mhanaje kase rajya?",
+        "Svarajya mhanaje svatahche rajya ka?",
+        "What does Swarajya mean?",
+        "स्वराज्य म्हणजे काय",
+        "स्वराज्याची व्यख्य काय आहे",
+        "स्वराज्य म्हणजे कसे राज्य",
+        "स्वराज्य म्हणजे स्वतह्चे राज्य का",
+        "स्वराज्य मेअन"
+      ],
+      "answer": {
+        "mr": "स्वराज्य म्हणजे स्वतःच्या लोकांचे, लोकांच्या हितासाठी चालणारे न्याय्य राज्य."
+      },
+      "category": "concept"
+    },
+    {
+      "question": "Tya kalata maharashhtrata kona rajya karata hote?",
+      "variants": [
+        "Maharashhtrata konatya sulatananche rajya hote?",
+        "Adilashaha ani nijamashaha kona hote?",
+        "Who ruled Maharashtra before Shivaji?",
+        "त्या कळतात महाराष्ट्रात कोण राज्य करता होते",
+        "महाराष्ट्रात कोणत्या सुलतनन्चे राज्य होते",
+        "अदिलशह आणि निजमशह कोण होते",
+        "रुलेद महाराष्ट्र बेफोरे शिवाजी"
+      ],
+      "answer": {
+        "mr": "त्या काळात आदिलशहा आणि निजामशहा हे सुलतान महाराष्ट्रात राज्य करत होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Adilashaha ani nijamashaha yanchyata kaya chalata ase?",
+      "variants": [
+        "Tya dona sulatananmadhye sanbandha kase hote?",
+        "Tyanchyata shantata hoti ka?",
+        "Did they fight with each other?",
+        "अदिलशह आणि निजमशह यन्च्यत काय चलत असे",
+        "त्या दोन सुलतनन्मध्ये सन्बन्ध कसे होते",
+        "त्यन्च्यत शन्तत होती का",
+        "थेय फिघ्त विथ एअच ओथेर"
+      ],
+      "answer": {
+        "mr": "त्यांच्यात सतत लढाया आणि भांडणे चालू असत. त्यामुळे प्रदेशात अस्थिरता होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Tya ladhayancha trasa konala hota hota?",
+      "variants": [
+        "Ladhayancha parinama konavara hota hota?",
+        "Rayatechi avastha ka vaita hoti?",
+        "Who suffered because of these wars?",
+        "त्या लधयन्च त्रस कोनल होता होता",
+        "लधयन्च परिनम कोनवर होता होता",
+        "रयतेचि अवस्थ का वैत होती",
+        "सुफ्फेरेद बेकौसे थेसे वर्स"
+      ],
+      "answer": {
+        "mr": "त्या लढायांचा त्रास सामान्य रयतेला सहन करावा लागत होता. त्यांचे जीवन असुरक्षित झाले होते."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Tya kalata rayatechi sthiti kashi hoti?",
+      "variants": [
+        "Loka sukhi hote ka?",
+        "Rayatela anna milata hote ka?",
+        "How was the condition of people?",
+        "त्या कळतात रयतेचि स्थिति कशी होती",
+        "लोक सुखि होते का",
+        "रयतेल अण मिलत होते का",
+        "कोन्दितिओन पेओप्ले"
+      ],
+      "answer": {
+        "mr": "रयतेची स्थिती खूपच वाईट होती. त्यांना पोटभर अन्न आणि सुरक्षितता दोन्ही कमी होते."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Lokanna sana-utsava mokalepanane sajare karata yeta hote ka?",
+      "variants": [
+        "Tya kalata loka sana sajare karata hote ka?",
+        "Bhitimule loka kaya karata hote?",
+        "Were festivals celebrated freely?",
+        "लोकांना सन-उत्सव मोकलेपनने सजरे करता येत होते का",
+        "त्या कळतात लोक सन सजरे करता होते का",
+        "भितिमुले लोक काय करता होते",
+        "फेस्तिवल्स केलेब्रतेद फ्रील्य"
+      ],
+      "answer": {
+        "mr": "नाही, भीतीमुळे लोकांना सण आणि पूजा मोकळेपणाने करता येत नव्हती."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Deshamukha ani deshapande kona hote?",
+      "variants": [
+        "Deshamukhanchi bhumika kaya hoti?",
+        "Deshapande kaya karata hote?",
+        "Who were Deshmukh and Deshpande?",
+        "देशमुख आणि देशपन्दे कोण होते",
+        "देशमुखन्चि भूमिका काय होती",
+        "देशपन्दे काय करता होते",
+        "देश्मुख देश्पन्दे"
+      ],
+      "answer": {
+        "mr": "ते वतनदार होते. पण त्यांना रयतेपेक्षा स्वतःच्या फायद्याची जास्त काळजी होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Tya kalata maharashhtrata arajakata ka hoti?",
+      "variants": [
+        "Maharashhtrata gondhala ka hota?",
+        "Tya kalata shantata ka navhati?",
+        "Why was there chaos in Maharashtra?",
+        "त्या कळतात महाराष्ट्रात अरजकत का होती",
+        "महाराष्ट्रात गोन्धल का होता",
+        "त्या कळतात शन्तत का नव्हती",
+        "थेरे चओस महाराष्ट्र"
+      ],
+      "answer": {
+        "mr": "सततच्या लढाया, अन्याय आणि स्वार्थी कारभारामुळे महाराष्ट्रात अराजकता पसरली होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Rayatela konakonatya adachani hotya?",
+      "variants": [
+        "Lokanna konata trasa hota hota?",
+        "Tya veli samanya manasachi sthiti kashi hoti?",
+        "What problems did common people face?",
+        "रयतेल कोनकोनत्य अदचनि होत्य",
+        "लोकांना कोणता त्रस होता होता",
+        "त्या वेलि समन्य मनसचि स्थिति कशी होती",
+        "प्रोब्लेम्स कोम्मोन पेओप्ले फके"
+      ],
+      "answer": {
+        "mr": "रयतेला अन्नाची कमतरता, सुरक्षिततेचा अभाव आणि अन्यायाचा त्रास सहन करावा लागत होता."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Shivaji maharajanni paristhiti pahuna kaya tharavale?",
+      "variants": [
+        "Tyanni kaya nirnaya ghetala?",
+        "Shivaji maharajanni kaya nirdhara kela?",
+        "What did Shivaji Maharaj decide?",
+        "शिवाजी महाराजांनी परिस्थिति पहुन काय थरवले",
+        "त्यांनी काय निर्णय घेतल",
+        "शिवाजी महाराजांनी काय निर्धर केला",
+        "शिवाजी महाराज देकिदे"
+      ],
+      "answer": {
+        "mr": "त्यांनी रयतेला सुखी करण्यासाठी स्वराज्य स्थापण्याचा निर्धार केला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanche svarajya konasathi hote?",
+      "variants": [
+        "Svarajya konasathi ubharale gele?",
+        "He rajya phakta hindunsathi hote ka?",
+        "For whom was Swarajya established?",
+        "शिवाजी महाराजांचे स्वराज्य कोनसथि होते",
+        "स्वराज्य कोनसथि उभरले गेले",
+        "हे राज्य फक्त हिन्दुन्सथि होते का",
+        "व्होम स्वराज्य एस्तब्लिशेद"
+      ],
+      "answer": {
+        "mr": "स्वराज्य सर्व जाती-धर्मांच्या लोकांसाठी होते. त्यात कोणताही भेदभाव नव्हता."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni dharmabheda kela ka?",
+      "variants": [
+        "Tyanni konatyahi dharmala kami lekhale ka?",
+        "Shivaji maharaja dharmanirapekshha hote ka?",
+        "Did Shivaji discriminate based on religion?",
+        "शिवाजी महाराजांनी धर्मभेद केला का",
+        "त्यांनी कोनत्यहि धर्मल कमी लेखले का",
+        "शिवाजी महाराज धर्मनिरपेक्ष होते का",
+        "शिवाजी दिस्क्रिमिनते बसेद रेलिगिओन"
+      ],
+      "answer": {
+        "mr": "नाही, त्यांनी सर्व धर्मांचा आदर केला आणि कोणताही धर्मभेद केला नाही."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajancha mukhya uddesha kaya hota?",
+      "variants": [
+        "Tyanche dhyeya kaya hote?",
+        "Shivaji maharaja kaya sadhya karu ichchita hote?",
+        "What was Shivaji's main objective?",
+        "शिवाजी महाराजांचा मुख्य उद्देश काय होता",
+        "त्यांचे ध्येय काय होते",
+        "शिवाजी महाराज काय सध्य करु इच्चित होते",
+        "शिवाजी'स मैन ओब्जेक्तिवे"
+      ],
+      "answer": {
+        "mr": "लोकांचे रक्षण करणे आणि न्याय्य स्वराज्य निर्माण करणे हा त्यांचा मुख्य उद्देश होता."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajyachi kalpana lokanna ka avadali?",
+      "variants": [
+        "Lokanni svarajyala pathinba ka dila?",
+        "Svarajya lokapriya ka jhale?",
+        "Why did people support Swarajya?",
+        "स्वराज्याची कल्पन लोकांना का अवदलि",
+        "लोकणि स्वरज्यल पथिन्ब का दिला",
+        "स्वराज्य लोकप्रिय का झाले",
+        "पेओप्ले सुप्पोर्त स्वराज्य"
+      ],
+      "answer": {
+        "mr": "कारण स्वराज्यात लोकांचे हित, न्याय आणि सुरक्षितता यांना महत्त्व होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Tya kalata lokanchi arthika sthiti kashi hoti?",
+      "variants": [
+        "Loka shrimanta hote ka?",
+        "Rayatekade purese paise hote ka?",
+        "What was the economic condition?",
+        "त्या कळतात लोकन्चि अर्थिक स्थिति कशी होती",
+        "लोक श्रिमन्त होते का",
+        "रयतेकदे पुरेसे पैसे होते का",
+        "एकोनोमिक कोन्दितिओन"
+      ],
+      "answer": {
+        "mr": "लोक गरीब होते आणि त्यांना पोटभर अन्नही मिळत नव्हते."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Shivaji maharajanni anyaya karanarya sattanshi kaya kele?",
+      "variants": [
+        "Tyanni anyayala kasa virodha kela?",
+        "Shivaji maharajanni kaya pavale uchalali?",
+        "How did he fight injustice?",
+        "शिवाजी महाराजांनी अन्याय करनर्य सत्तन्शि काय केले",
+        "त्यांनी अन्यायाला कसा विरोध केला",
+        "शिवाजी महाराजांनी काय पवले उचललि",
+        "हे फिघ्त इन्जुस्तिके"
+      ],
+      "answer": {
+        "mr": "त्यांनी धैर्याने लढा देऊन अन्याय करणाऱ्या सत्तांचा पराभव केला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Rayatela svarajyamule kaya labha jhala?",
+      "variants": [
+        "Svarajyacha lokanna kaya phayada jhala?",
+        "Rayateche jivana kase badalale?",
+        "What benefit did people get from Swarajya?",
+        "रयतेल स्वरज्यमुले काय लभ झाला",
+        "स्वराज्याचा लोकांना काय फयद झाला",
+        "रयतेचे जिवन कसे बदलले",
+        "बेनेफित पेओप्ले गेत फ्रोम स्वराज्य"
+      ],
+      "answer": {
+        "mr": "रयतेला सुरक्षितता, न्याय आणि आत्मविश्वास मिळाला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Maharashhtratila loka trasta ka jhale hote?",
+      "variants": [
+        "Loka duhkhi ka hote?",
+        "Tya kalata asantoshha ka hota?",
+        "Why were people unhappy?",
+        "महरष्त्रतिल लोक त्रस्त का झाले होते",
+        "लोक दुह्खि का होते",
+        "त्या कळतात असन्तोष का होता",
+        "पेओप्ले उन्हप्प्य"
+      ],
+      "answer": {
+        "mr": "अन्याय, लढाया आणि स्वार्थी कारभारामुळे लोक त्रस्त झाले होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajyachi sthapana konatya mulyanvara jhali?",
+      "variants": [
+        "Shivaji maharajanni konatya tattvanvara rajya ubharale?",
+        "Svarajyache adhara kaya hote?",
+        "On what principles was Swarajya built?",
+        "स्वराज्याची स्थापना कोणत्या मुल्यन्वर झाली",
+        "शिवाजी महाराजांनी कोणत्या तत्त्वन्वर राज्य उभरले",
+        "स्वरज्यचे अधर काय होते",
+        "प्रिन्किप्लेस स्वराज्य बुइल्त"
+      ],
+      "answer": {
+        "mr": "न्याय, समानता आणि लोककल्याण या मूल्यांवर स्वराज्य उभारले गेले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Tya kalata lokanna surakshhitata hoti ka?",
+      "variants": [
+        "Loka surakshhita hote ka?",
+        "Rayatela sanrakshhana milata hote ka?",
+        "Were people safe during that time?",
+        "त्या कळतात लोकांना सुरक्षितत होती का",
+        "लोक सुरक्षित होते का",
+        "रयतेल सन्रक्षन मिलत होते का",
+        "पेओप्ले सफे दुरिन्ग थत तिमे"
+      ],
+      "answer": {
+        "mr": "नाही, सततच्या लढायांमुळे लोकांना सुरक्षित वाटत नव्हते."
+      },
+      "category": "social"
+    },
+    {
+      "question": "Shivaji maharaja preranadayi ka aheta?",
+      "variants": [
+        "Tyanche karya mahana ka manale jate?",
+        "Shivaji maharajanche mahattva kaya ahe?",
+        "Why is Shivaji Maharaj inspirational?",
+        "शिवाजी महाराज प्रेरनदयि का अहेत",
+        "त्यांचे कर्य महन का मनले जते",
+        "शिवाजी महाराजांचे महत्त्व काय आहे",
+        "शिवाजी महाराज इन्स्पिरतिओनल"
+      ],
+      "answer": {
+        "mr": "कारण त्यांनी कठीण परिस्थितीतून स्वराज्य उभे केले आणि लोकांचे रक्षण केले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Maharashhtrata santaparanparechi suruvata koni keli?",
+      "variants": [
+        "Santa paranparechi suruvata konapasuna jhali?",
+        "Maharashhtratila pahile santa kona manale jatata?",
+        "Who started the saint tradition in Maharashtra?",
+        "महाराष्ट्रात सन्तपरन्परेचि सुरुवत कोणी केली",
+        "संत परन्परेचि सुरुवत कोनपसुन झाली",
+        "महरष्त्रतिल पहिले संत कोण मनले जतत",
+        "स्तर्तेद सैन्त त्रदितिओन महाराष्ट्र"
+      ],
+      "answer": {
+        "mr": "महाराष्ट्रात संतपरंपरेची सुरुवात संत ज्ञानेश्वर आणि संत नामदेव यांच्या काळापासून झाली असे मानले जाते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santanni samajala konata mukhya sandesha dila?",
+      "variants": [
+        "Santancha mukhya upadesha kaya hota?",
+        "Santanni lokanna kaya shikavale?",
+        "What was the main message of saints?",
+        "संतांनी समाजाला कोणता मुख्य संदेश दिला",
+        "सन्तन्च मुख्य उपदेश काय होता",
+        "संतांनी लोकांना काय शिकवले",
+        "मैन मेस्सगे संत"
+      ],
+      "answer": {
+        "mr": "संतांनी लोकांना समानता, दया, भक्ती आणि मानवतेचा संदेश दिला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santa jnaneshvara kona hote?",
+      "variants": [
+        "Jnaneshvara maharajanchi olakha kaya?",
+        "Santa jnaneshvara kashasathi prasiddha aheta?",
+        "Who was Sant Dnyaneshwar?",
+        "संत ज्ननेश्वर कोण होते",
+        "ज्ननेश्वर महरजन्चि ओलख काय",
+        "संत ज्ननेश्वर कशसथि प्रसिद्ध अहेत",
+        "सन्त द्न्यनेश्वर"
+      ],
+      "answer": {
+        "mr": "संत ज्ञानेश्वर हे महान संत आणि तत्त्वज्ञ होते. त्यांनी ज्ञानेश्वरी हा ग्रंथ लिहिला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Jnaneshvari ha grantha koni lihila?",
+      "variants": [
+        "Jnaneshvariche lekhaka kona?",
+        "Jnaneshvari koni rachali?",
+        "Who wrote Dnyaneshwari?",
+        "ज्ननेश्वरि हा ग्रन्थ कोणी लिहिल",
+        "ज्ननेश्वरिचे लेखक कोण",
+        "ज्ननेश्वरि कोणी रचलि",
+        "व्रोते द्न्यनेश्वरि"
+      ],
+      "answer": {
+        "mr": "ज्ञानेश्वरी हा ग्रंथ संत ज्ञानेश्वरांनी मराठी भाषेत लिहिला."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santa namadeva kashasathi olakhale jatata?",
+      "variants": [
+        "Namadeva maharajanche karya kaya?",
+        "Santa namadeva kona hote?",
+        "Who was Sant Namdev?",
+        "संत नमदेव कशसथि ओलखले जतत",
+        "नमदेव महाराजांचे कर्य काय",
+        "संत नमदेव कोण होते",
+        "सन्त नम्देव"
+      ],
+      "answer": {
+        "mr": "संत नामदेव हे विठ्ठल भक्त होते आणि त्यांनी अनेक अभंग रचले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santa namadeva kuthe gele hote?",
+      "variants": [
+        "Namadeva maharajanni kuthe pravasa kela?",
+        "Te panjabala gele hote ka?",
+        "Where did Sant Namdev travel?",
+        "संत नमदेव कुठे गेले होते",
+        "नमदेव महाराजांनी कुठे प्रवस केला",
+        "ते पन्जबल गेले होते का",
+        "सन्त नम्देव त्रवेल"
+      ],
+      "answer": {
+        "mr": "संत नामदेव पंजाबपर्यंत गेले आणि तिथेही भक्तीचा संदेश दिला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santa ekanathanni samajala kaya shikavale?",
+      "variants": [
+        "Ekanatha maharajancha upadesha kaya hota?",
+        "Santa ekanathancha sandesha kaya?",
+        "What did Sant Eknath teach?",
+        "संत एकनथणि समाजाला काय शिकवले",
+        "एकनथ महाराजांचा उपदेश काय होता",
+        "संत एकनथन्च संदेश काय",
+        "सन्त एक्नथ तेअच"
+      ],
+      "answer": {
+        "mr": "संत एकनाथांनी समानता, दया आणि सर्वांना समान वागणूक देण्याचा उपदेश केला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santa tukarama kashasathi prasiddha aheta?",
+      "variants": [
+        "Tukarama maharajanche karya kaya?",
+        "Santa tukaramanni kaya lihile?",
+        "Why is Sant Tukaram famous?",
+        "संत तुकरम कशसथि प्रसिद्ध अहेत",
+        "तुकरम महाराजांचे कर्य काय",
+        "संत तुकरमणि काय लिहिले",
+        "सन्त तुकरम फमोउस"
+      ],
+      "answer": {
+        "mr": "संत तुकाराम अभंगांसाठी प्रसिद्ध आहेत आणि त्यांनी लोकांना भक्ती व समतेचा संदेश दिला."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santa tukaramanni karjachi kagadapatre kuthe budavali?",
+      "variants": [
+        "Tukarama maharajanni karjachi kagadapatre kaya keli?",
+        "Tya kagadapatranche kaya jhale?",
+        "Where did Tukaram throw the debt papers?",
+        "संत तुकरमणि कर्जचि कगदपत्रे कुठे बुदवलि",
+        "तुकरम महाराजांनी कर्जचि कगदपत्रे काय केली",
+        "त्या कगदपत्रन्चे काय झाले",
+        "तुकरम थ्रोव देब्त पपेर्स"
+      ],
+      "answer": {
+        "mr": "संत तुकारामांनी कर्जाची कागदपत्रे इंद्रायणी नदीत बुडवली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Samartha ramadasanni konata sandesha dila?",
+      "variants": [
+        "Ramadasa svamincha upadesha kaya hota?",
+        "Samartha ramadasa kashasathi olakhale jatata?",
+        "What was the message of Samarth Ramdas?",
+        "समर्थ रमदसणि कोणता संदेश दिला",
+        "रमदस स्वमिन्च उपदेश काय होता",
+        "समर्थ रमदस कशसथि ओलखले जतत",
+        "मेस्सगे समर्थ रम्दस"
+      ],
+      "answer": {
+        "mr": "समर्थ रामदासांनी लोकांना शक्ती, संघटना आणि अन्यायाविरुद्ध लढण्याचा संदेश दिला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanni samajata konata badala ghadavala?",
+      "variants": [
+        "Santancha samajavara kaya parinama jhala?",
+        "Santanni lokanche jivana kase badalale?",
+        "What impact did saints have on society?",
+        "संतांनी समजत कोणता बदल घदवल",
+        "सन्तन्च समजवर काय परिनम झाला",
+        "संतांनी लोकांचे जिवन कसे बदलले",
+        "इम्पक्त संत सोकिएत्य"
+      ],
+      "answer": {
+        "mr": "संतांनी लोकांमध्ये आत्मविश्वास, समानता आणि भक्तिभाव निर्माण केला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santanni konatya bhashheta upadesha kela?",
+      "variants": [
+        "Santanni konati bhashha vaparali?",
+        "Santancha upadesha konatya bhashheta hota?",
+        "In which language did saints preach?",
+        "संतांनी कोणत्या भषेत उपदेश केला",
+        "संतांनी कोणती भष वपरलि",
+        "सन्तन्च उपदेश कोणत्या भषेत होता",
+        "लन्गुअगे संत प्रेअच"
+      ],
+      "answer": {
+        "mr": "संतांनी मराठी भाषेत उपदेश केला, त्यामुळे सामान्य लोकांना तो समजला."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santa jnaneshvaranni konata motha grantha lihila?",
+      "variants": [
+        "Jnaneshvarancha prasiddha grantha konata?",
+        "Tyanni konate sahitya nirmana kele?",
+        "Which major book did Dnyaneshwar write?",
+        "संत ज्ननेश्वरणि कोणता मोठा ग्रन्थ लिहिल",
+        "ज्ननेश्वरन्च प्रसिद्ध ग्रन्थ कोणता",
+        "त्यांनी कोणते सहित्य निर्माण केले",
+        "मजोर बूक द्न्यनेश्वर व्रिते"
+      ],
+      "answer": {
+        "mr": "संत ज्ञानेश्वरांनी ज्ञानेश्वरी हा मोठा ग्रंथ लिहिला."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santanni konatya mulyancha prasara kela?",
+      "variants": [
+        "Santanni lokanna kaya shikavale?",
+        "Tyancha upadesha konatya tattvanvara hota?",
+        "What values did saints spread?",
+        "संतांनी कोणत्या मुल्यन्च प्रसर केला",
+        "संतांनी लोकांना काय शिकवले",
+        "त्यांचा उपदेश कोणत्या तत्त्वन्वर होता",
+        "वलुएस संत स्प्रेअद"
+      ],
+      "answer": {
+        "mr": "संतांनी दया, क्षमा, समानता आणि भक्ती यांचा प्रसार केला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanchya karyacha shivaji maharajanna kasa upayoga jhala?",
+      "variants": [
+        "Santanchya shikavanicha svarajyavara kaya parinama jhala?",
+        "Santanni svarajyasa madata keli ka?",
+        "How did saints help Swarajya?",
+        "सन्तन्च्य कर्यच शिवाजी महाराजांना कसा उपयोग झाला",
+        "सन्तन्च्य शिकवनिच स्वरज्यवर काय परिनम झाला",
+        "संतांनी स्वरज्यस मदत केली का",
+        "संत हेल्प स्वराज्य"
+      ],
+      "answer": {
+        "mr": "संतांच्या शिकवणीमुळे लोकांमध्ये आत्मविश्वास आणि एकता निर्माण झाली, ज्याचा उपयोग स्वराज्य स्थापनेत झाला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Santa jnaneshvaranche bandhu-bhagini kona hote?",
+      "variants": [
+        "Jnaneshvara maharajanchya kutunbata kona hote?",
+        "Jnaneshvaranna kiti bhavande hoti?",
+        "Who were the siblings of Sant Dnyaneshwar?",
+        "संत ज्ननेश्वरन्चे बन्धु-भगिनि कोण होते",
+        "ज्ननेश्वर महाराजांच्या कुतुन्बत कोण होते",
+        "ज्ननेश्वरण किती भवन्दे होती",
+        "सिब्लिन्ग्स सन्त द्न्यनेश्वर"
+      ],
+      "answer": {
+        "mr": "ज्ञानेश्वरांना निवृत्तिनाथ, सोपानदेव आणि मुक्ताबाई अशी भावंडे होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Jnaneshvaranna samajane ka trasa dila?",
+      "variants": [
+        "Jnaneshvaranvara anyaya ka jhala?",
+        "Tyanna lokanni ka valita takale?",
+        "Why was Dnyaneshwar troubled by society?",
+        "ज्ननेश्वरण समजने का त्रस दिला",
+        "ज्ननेश्वरन्वर अन्याय का झाला",
+        "त्यांना लोकणि का वलित तकले",
+        "द्न्यनेश्वर त्रोउब्लेद ब्य सोकिएत्य"
+      ],
+      "answer": {
+        "mr": "त्यांच्या वडिलांनी संन्यास घेतला आणि नंतर संसार केला म्हणून समाजाने त्यांना वाळीत टाकले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Muktabaine jnaneshvaranna kaya sangitale?",
+      "variants": [
+        "Muktabaicha upadesha kaya hota?",
+        "Tati ughada jnaneshvara mhanaje kaya?",
+        "What did Muktabai tell Dnyaneshwar?",
+        "मुक्तबैने ज्ननेश्वरण काय सन्गितले",
+        "मुक्तबैच उपदेश काय होता",
+        "तति उघद ज्ननेश्वर म्हणजे काय",
+        "मुक्तबै तेल्ल द्न्यनेश्वर"
+      ],
+      "answer": {
+        "mr": "मुक्ताबाईंनी त्यांना निराश न होता लोककल्याणासाठी काम करण्याचा सल्ला दिला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Jnaneshvaranni marathi bhashheta grantha ka lihila?",
+      "variants": [
+        "Jnaneshvari marathita ka lihili?",
+        "Sanskrritaaivaji marathi ka vaparali?",
+        "Why was Dnyaneshwari written in Marathi?",
+        "ज्ननेश्वरणि मराठी भषेत ग्रन्थ का लिहिल",
+        "ज्ननेश्वरि मरथित का लिहिलि",
+        "सन्स्क्र्रिताइवजि मराठी का वपरलि",
+        "द्न्यनेश्वरि व्रित्तेन मराठी"
+      ],
+      "answer": {
+        "mr": "कारण सामान्य लोकांना मराठी समजत होती आणि त्यांना धर्मज्ञान मिळावे म्हणून त्यांनी मराठीत लिहिले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Santa namadevanchya abhanganche mahattva kaya ahe?",
+      "variants": [
+        "Namadevanche abhanga kashasathi prasiddha aheta?",
+        "Tyanchya rachanancha upayoga kaya?",
+        "Why are Namdev’s abhangas important?",
+        "संत नमदेवन्च्य अभन्गन्चे महत्त्व काय आहे",
+        "नमदेवन्चे अभन्ग कशसथि प्रसिद्ध अहेत",
+        "त्यांच्या रचनन्च उपयोग काय",
+        "नम्देव’स अभन्गस महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "त्यांच्या अभंगांमधून भक्ती, समानता आणि ईश्वरप्रेमाचा संदेश दिला आहे."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santa ekanathanni pratyakshha krritituna kaya dakhavale?",
+      "variants": [
+        "Ekanatha maharajanche udaharana kaya sangate?",
+        "Te phakta bolata hote ki krriti karata hote?",
+        "What did Eknath demonstrate through action?",
+        "संत एकनथणि प्रत्यक्ष क्र्रितितुन काय दखवले",
+        "एकनथ महाराजांचे उदहरन काय सन्गते",
+        "ते फक्त बोलत होते कि क्र्रिति करता होते",
+        "एक्नथ देमोन्स्त्रते थ्रोउघ अक्तिओन"
+      ],
+      "answer": {
+        "mr": "संत एकनाथांनी प्रत्यक्ष कृतीतून दया आणि समानतेचा आदर्श घालून दिला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santa tukaramanche abhanga ajahi ka gayala jatata?",
+      "variants": [
+        "Tukaramanchi gatha ka prasiddha ahe?",
+        "Loka ajahi tyanche abhanga ka mhanatata?",
+        "Why are Tukaram’s abhangas sung even today?",
+        "संत तुकरमन्चे अभन्ग अजहि का गयल जतत",
+        "तुकरमन्चि गथ का प्रसिद्ध आहे",
+        "लोक अजहि त्यांचे अभन्ग का म्हनतत",
+        "तुकरम’स अभन्गस सुन्ग एवेन तोदय"
+      ],
+      "answer": {
+        "mr": "कारण त्यांच्या अभंगांत जीवनाचे सत्य आणि भक्तीचा सोपा मार्ग सांगितला आहे."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Samartha ramadasanni konata grantha lihila?",
+      "variants": [
+        "Ramadasa svamincha prasiddha grantha konata?",
+        "Dasabodha koni lihila?",
+        "Which book did Samarth Ramdas write?",
+        "समर्थ रमदसणि कोणता ग्रन्थ लिहिल",
+        "रमदस स्वमिन्च प्रसिद्ध ग्रन्थ कोणता",
+        "दसबोध कोणी लिहिल",
+        "बूक समर्थ रम्दस व्रिते"
+      ],
+      "answer": {
+        "mr": "समर्थ रामदासांनी 'दासबोध' हा ग्रंथ लिहिला."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Ramadasa svaminni hanumana mandire ka bandhali?",
+      "variants": [
+        "Hanumana mandirancha uddesha kaya hota?",
+        "Shakti upasaneche mahattva kaya?",
+        "Why did Ramdas build Hanuman temples?",
+        "रमदस स्वमिणि हनुमन मन्दिरे का बन्धलि",
+        "हनुमन मन्दिरन्च उद्देश काय होता",
+        "शक्ती उपसनेचे महत्त्व काय",
+        "रम्दस बुइल्द हनुमन तेम्प्लेस"
+      ],
+      "answer": {
+        "mr": "लोकांमध्ये शक्ती आणि धैर्य निर्माण व्हावे म्हणून त्यांनी हनुमान मंदिरे बांधली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanni jatibhedabaddala kaya bhumika ghetali?",
+      "variants": [
+        "Santanni bhedabhava manya kela ka?",
+        "Jativyavasthebaddala santanche mata kaya?",
+        "What was saints’ view on caste?",
+        "संतांनी जतिभेदबद्दल काय भूमिका घेतलि",
+        "संतांनी भेदभव मन्य केला का",
+        "जतिव्यवस्थेबद्दल सन्तन्चे मत काय",
+        "संत’ विएव कस्ते"
+      ],
+      "answer": {
+        "mr": "संतांनी जातिभेद नाकारला आणि सर्वांना समान मानले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanni bhaktimarga ka mahattvacha manala?",
+      "variants": [
+        "Bhaktimargache mahattva kaya?",
+        "Santanni karmakandaivaji kaya sangitale?",
+        "Why did saints promote devotion?",
+        "संतांनी भक्तिमर्ग का महत्त्वच मनल",
+        "भक्तिमर्गचे महत्त्व काय",
+        "संतांनी कर्मकन्दैवजि काय सन्गितले",
+        "संत प्रोमोते देवोतिओन"
+      ],
+      "answer": {
+        "mr": "भक्तिमार्ग सोपा आहे आणि तो सर्वांना उपलब्ध आहे म्हणून संतांनी तो महत्त्वाचा मानला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Santanni lokanmadhye atmavishvasa kasa nirmana kela?",
+      "variants": [
+        "Lokanmadhye jagrriti kashi jhali?",
+        "Santancha prabhava kaya hota?",
+        "How did saints build confidence?",
+        "संतांनी लोकांमध्ये आत्मविश्वास कसा निर्माण केला",
+        "लोकांमध्ये जग्र्रिति कशी झाली",
+        "सन्तन्च प्रभाव काय होता",
+        "संत बुइल्द कोन्फिदेन्के"
+      ],
+      "answer": {
+        "mr": "त्यांच्या उपदेशामुळे लोकांना स्वतःची किंमत कळली आणि आत्मविश्वास वाढला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santa paranpareta mahila santancha sahabhaga hota ka?",
+      "variants": [
+        "Mahila santa kona hotya?",
+        "Santa paranpareta striyanchi bhumika kaya?",
+        "Were there women saints?",
+        "संत परन्परेत महिल सन्तन्च सहभग होता का",
+        "महिल संत कोण होत्य",
+        "संत परन्परेत स्त्रियन्चि भूमिका काय",
+        "थेरे वोमेन संत"
+      ],
+      "answer": {
+        "mr": "हो, मुक्ताबाई, जनाबाई आणि इतर महिला संतांनीही मोठे कार्य केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santanchya karyamule samajata kaya badala jhala?",
+      "variants": [
+        "Santanni samaja sudharala ka?",
+        "Tyanchya upadeshacha parinama kaya?",
+        "What social change occurred?",
+        "सन्तन्च्य कर्यमुले समजत काय बदल झाला",
+        "संतांनी समज सुधरल का",
+        "त्यांच्या उपदेशच परिनम काय",
+        "सोकिअल चन्गे ओक्कुर्रेद"
+      ],
+      "answer": {
+        "mr": "समाजात समानता, बंधुता आणि भक्तिभाव वाढला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santanni andhashraddheviruddha kaya sangitale?",
+      "variants": [
+        "Santa andhashraddhebaddala kaya mhanale?",
+        "Santanni chukichya prathanna virodha kela ka?",
+        "What did saints say about blind faith?",
+        "संतांनी अन्धश्रद्धेविरुद्ध काय सन्गितले",
+        "संत अन्धश्रद्धेबद्दल काय म्हनले",
+        "संतांनी चुकिच्य प्रथण विरोध केला का",
+        "संत सय अबोउत ब्लिन्द फैथ"
+      ],
+      "answer": {
+        "mr": "संतांनी अंधश्रद्धेला विरोध केला आणि खऱ्या भक्तीचा मार्ग दाखवला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanchya kirtanancha uddesha kaya hota?",
+      "variants": [
+        "Kirtana ka kele jata hote?",
+        "Santa kirtanatuna kaya sangata hote?",
+        "What was the purpose of kirtans?",
+        "सन्तन्च्य किर्तनन्च उद्देश काय होता",
+        "किर्तन का केले जातात होते",
+        "संत किर्तनतुन काय सन्गत होते",
+        "पुर्पोसे किर्तन्स"
+      ],
+      "answer": {
+        "mr": "कीर्तनातून लोकांना भक्ती, नैतिकता आणि जीवनमूल्यांची शिकवण दिली जात होती."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santa namadevanchya rachana konatya dharmagranthata adhalatata?",
+      "variants": [
+        "Namadevanche abhanga kuthe samavishhta aheta?",
+        "Gurugranthasahibamadhye konache abhanga aheta?",
+        "In which scripture are Namdev’s hymns included?",
+        "संत नमदेवन्च्य रचन कोणत्या धर्मग्रन्थत अधलतत",
+        "नमदेवन्चे अभन्ग कुठे समविष्त अहेत",
+        "गुरुग्रन्थसहिबमध्ये कोनचे अभन्ग अहेत",
+        "स्क्रिप्तुरे नम्देव’स ह्य्म्न्स इन्क्लुदेद"
+      ],
+      "answer": {
+        "mr": "संत नामदेवांच्या काही रचना शिखांच्या गुरुग्रंथसाहिबमध्ये समाविष्ट आहेत."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santa jnaneshvaranni samadhi kuthe ghetali?",
+      "variants": [
+        "Jnaneshvaranchi samadhi kuthe ahe?",
+        "Te kuthe samadhista jhale?",
+        "Where did Sant Dnyaneshwar take samadhi?",
+        "संत ज्ननेश्वरणि समधि कुठे घेतलि",
+        "ज्ननेश्वरन्चि समधि कुठे आहे",
+        "ते कुठे समधिस्त झाले",
+        "सन्त द्न्यनेश्वर तके समधि"
+      ],
+      "answer": {
+        "mr": "संत ज्ञानेश्वरांनी आळंदी येथे समाधी घेतली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santa tukarama konatya gavache hote?",
+      "variants": [
+        "Tukarama maharaja kuthe rahata hote?",
+        "Tyanche gava konate?",
+        "Where was Sant Tukaram from?",
+        "संत तुकरम कोणत्या गवचे होते",
+        "तुकरम महाराज कुठे रहत होते",
+        "त्यांचे गव कोणते",
+        "सन्त तुकरम फ्रोम"
+      ],
+      "answer": {
+        "mr": "संत तुकाराम हे देहू गावचे होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Santanni lokanmadhye bandhubhava kasa vadhavala?",
+      "variants": [
+        "Bandhubhavachi bhavana koni nirmana keli?",
+        "Santanni ekata kashi vadhavali?",
+        "How did saints promote brotherhood?",
+        "संतांनी लोकांमध्ये बन्धुभव कसा वधवल",
+        "बन्धुभवचि भवन कोणी निर्माण केली",
+        "संतांनी एकत कशी वधवलि",
+        "संत प्रोमोते ब्रोथेर्हूद"
+      ],
+      "answer": {
+        "mr": "संतांनी सर्वांना समान मानून आणि प्रेमाचा संदेश देऊन बंधुभाव वाढवला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santa ekanathanchya jivanatuna apalyala kaya shikayala milate?",
+      "variants": [
+        "Ekanatha maharajancha adarsha kaya sangato?",
+        "Tyanchya krritituna kaya shikave?",
+        "What do we learn from Eknath?",
+        "संत एकनथन्च्य जिवनतुन अपल्यल काय शिकयल मिळते",
+        "एकनथ महाराजांचा अदर्श काय सन्गतो",
+        "त्यांच्या क्र्रितितुन काय शिकवे",
+        "वे शिका फ्रोम एक्नथ"
+      ],
+      "answer": {
+        "mr": "त्यांच्या जीवनातून आपल्याला दया, समानता आणि कृतीतून उपदेश करण्याची शिकवण मिळते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santanni samajasudharanesathi kaya kele?",
+      "variants": [
+        "Santanni samaja kasa sudharala?",
+        "Tyanni konatya pratha badalalya?",
+        "How did saints reform society?",
+        "संतांनी समजसुधरनेसथि काय केले",
+        "संतांनी समज कसा सुधरल",
+        "त्यांनी कोणत्या प्रथ बदलल्य",
+        "संत रेफोर्म सोकिएत्य"
+      ],
+      "answer": {
+        "mr": "संतांनी भेदभाव दूर करून आणि योग्य मार्ग दाखवून समाज सुधारला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santanchya karyamule svarajyasa kasa adhara milala?",
+      "variants": [
+        "Santa ani svarajya yancha sanbandha kaya?",
+        "Santanni shivaji maharajanna madata keli ka?",
+        "How did saints support Swarajya?",
+        "सन्तन्च्य कर्यमुले स्वरज्यस कसा अधर मिलल",
+        "संत आणि स्वराज्य यन्च सन्बन्ध काय",
+        "संतांनी शिवाजी महाराजांना मदत केली का",
+        "संत सुप्पोर्त स्वराज्य"
+      ],
+      "answer": {
+        "mr": "संतांनी लोकांमध्ये एकता आणि आत्मविश्वास निर्माण केला, ज्यामुळे स्वराज्यास आधार मिळाला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Santanni konatya prakarachi bhashha vaparali?",
+      "variants": [
+        "Santanchi bhashha kashi hoti?",
+        "Te sadhi bhashha vaparata hote ka?",
+        "What kind of language did saints use?",
+        "संतांनी कोणत्या प्रकरचि भष वपरलि",
+        "सन्तन्चि भष कशी होती",
+        "ते सधि भष वपरत होते का",
+        "किन्द लन्गुअगे संत उसे"
+      ],
+      "answer": {
+        "mr": "संतांनी साधी आणि सोपी मराठी भाषा वापरली, जी सर्वांना समजेल अशी होती."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Santanni samajatila gariba lokansathi kaya kele?",
+      "variants": [
+        "Garibansathi santanni kaya kele?",
+        "Santa garibanna madata karata hote ka?",
+        "How did saints help the poor?",
+        "संतांनी समजतिल गरिब लोकन्सथि काय केले",
+        "गरिबन्सथि संतांनी काय केले",
+        "संत गरिबण मदत करता होते का",
+        "संत हेल्प पूर"
+      ],
+      "answer": {
+        "mr": "संतांनी गरिबांना आधार दिला आणि त्यांना आत्मविश्वास दिला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Santanni konatya vaita prathanna virodha kela?",
+      "variants": [
+        "Santanni chukichya rudhincha virodha kela ka?",
+        "Tyanni konatya goshhti badalalya?",
+        "Which bad practices did saints oppose?",
+        "संतांनी कोणत्या वैत प्रथण विरोध केला",
+        "संतांनी चुकिच्य रुधिन्च विरोध केला का",
+        "त्यांनी कोणत्या गोष्ति बदलल्य",
+        "बद प्रक्तिकेस संत ओप्पोसे"
+      ],
+      "answer": {
+        "mr": "संतांनी जातिभेद, अंधश्रद्धा आणि अन्याय यांना विरोध केला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Santa tukaramanchya abhangancha mukhya vishhaya kaya hota?",
+      "variants": [
+        "Tukaramanni kashavara lihile?",
+        "Tyanchya abhanganta kaya sangitale ahe?",
+        "What was the theme of Tukaram’s abhangas?",
+        "संत तुकरमन्च्य अभन्गन्च मुख्य विषय काय होता",
+        "तुकरमणि कशवर लिहिले",
+        "त्यांच्या अभन्गन्त काय सन्गितले आहे",
+        "थेमे तुकरम’स अभन्गस"
+      ],
+      "answer": {
+        "mr": "त्यांच्या अभंगांत भक्ती, समानता आणि ईश्वरप्रेमाचा संदेश आहे."
+      },
+      "category": "literature"
+    },
+    {
+      "question": "Samartha ramadasanni sanghataneche mahattva ka sangitale?",
+      "variants": [
+        "Ramadasanni ekatevara bhara ka dila?",
+        "Sanghatana ka garajeche ahe?",
+        "Why did Ramdas stress unity?",
+        "समर्थ रमदसणि सन्घतनेचे महत्त्व का सन्गितले",
+        "रमदसणि एकतेवर भर का दिला",
+        "सन्घतन का गरजेचे आहे",
+        "रम्दस स्त्रेस्स उनित्य"
+      ],
+      "answer": {
+        "mr": "कारण संघटित समाज अन्यायाविरुद्ध मजबूतपणे उभा राहू शकतो."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Santanchya shikavanicha ajahi kaya upayoga ahe?",
+      "variants": [
+        "Ajachya kalata santanche mahattva kaya?",
+        "Apana santankaduna kaya shikato?",
+        "What is the relevance of saints today?",
+        "सन्तन्च्य शिकवनिच अजहि काय उपयोग आहे",
+        "अजच्य कळतात सन्तन्चे महत्त्व काय",
+        "अपन सन्तन्कदुन काय शिकतो",
+        "रेलेवन्के संत तोदय"
+      ],
+      "answer": {
+        "mr": "आजही संतांची शिकवण आपल्याला समानता, प्रेम आणि नैतिक जीवन जगण्याची प्रेरणा देते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Bhosale gharane konasathi prasiddha hote?",
+      "variants": [
+        "Bhosalyanche gharane kashasathi olakhale jate?",
+        "Bhosale kona hote?",
+        "Why is the Bhosale family known?",
+        "भोसले घरने कोनसथि प्रसिद्ध होते",
+        "भोसल्यन्चे घरने कशसथि ओलखले जते",
+        "भोसले कोण होते",
+        "भोसले फमिल्य क्नोव्न"
+      ],
+      "answer": {
+        "mr": "भोसले घराणे शौर्य, पराक्रम आणि स्वराज्य स्थापनेतील योगदानासाठी प्रसिद्ध होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Maratha saradara mhanaje kona?",
+      "variants": [
+        "Maratha saradara kona hote?",
+        "Saradaranchi bhumika kaya hoti?",
+        "Who were Maratha sardars?",
+        "मराठा सरदार म्हणजे कोण",
+        "मराठा सरदार कोण होते",
+        "सरदरन्चि भूमिका काय होती",
+        "मराठा सर्दर्स"
+      ],
+      "answer": {
+        "mr": "मराठा सरदार हे शूर योद्धे होते जे विविध सुलतानांच्या सैन्यात काम करत होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Tya kalata maharashhtrata konatya sulatananchi satta hoti?",
+      "variants": [
+        "Maharashhtrata kona rajya karata hote?",
+        "Tya veli konatya badashahanche rajya hote?",
+        "Which rulers controlled Maharashtra then?",
+        "त्या कळतात महाराष्ट्रात कोणत्या सुलतनन्चि सत्त होती",
+        "महाराष्ट्रात कोण राज्य करता होते",
+        "त्या वेलि कोणत्या बदशहन्चे राज्य होते",
+        "रुलेर्स कोन्त्रोल्लेद महाराष्ट्र थेन"
+      ],
+      "answer": {
+        "mr": "त्या काळात आदिलशहा आणि निजामशहा यांची सत्ता महाराष्ट्रात होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Maratha saradara sulatananchya sainyata ka kama karata hote?",
+      "variants": [
+        "Saradaranni parakiya satteta seva ka keli?",
+        "Tyanna sainyata ka jave lagale?",
+        "Why did Maratha sardars serve sultans?",
+        "मराठा सरदार सुलतनन्च्य सैन्यत का काम करता होते",
+        "सरदरणि परकिय सत्तेत सेव का केली",
+        "त्यांना सैन्यत का जवे लगले",
+        "मराठा सर्दर्स सेर्वे सुल्तन्स"
+      ],
+      "answer": {
+        "mr": "कारण त्यांच्याकडे स्वतःचे राज्य नव्हते आणि उपजीविकेसाठी त्यांना सैन्यात काम करावे लागत होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Bhosale gharanyache pramukha purvaja kona hote?",
+      "variants": [
+        "Bhosalyanche mula purvaja kona?",
+        "Bhosale kuthuna ale?",
+        "Who were the ancestors of Bhosale family?",
+        "भोसले घरन्यचे प्रमुख पुर्वज कोण होते",
+        "भोसल्यन्चे मुल पुर्वज कोण",
+        "भोसले कुथुन अले",
+        "अन्केस्तोर्स भोसले फमिल्य"
+      ],
+      "answer": {
+        "mr": "भोसले घराण्याचे प्रमुख पूर्वज मालोजीराजे भोसले होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Malojiraje bhosale kona hote?",
+      "variants": [
+        "Malojirajanche karya kaya?",
+        "Te konachya seveta hote?",
+        "Who was Maloji Raje?",
+        "मलोजिरजे भोसले कोण होते",
+        "मलोजिरजन्चे कर्य काय",
+        "ते कोनच्य सेवेत होते",
+        "मलोजि रजे"
+      ],
+      "answer": {
+        "mr": "मालोजीराजे हे शूर सरदार होते आणि त्यांनी निजामशहाच्या सेवेत काम केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Malojirajanna konati jahagira milali?",
+      "variants": [
+        "Malojirajanna konati jamina milali?",
+        "Tyanna pune-supe ka denyata ale?",
+        "Which jagir was given to Maloji?",
+        "मलोजिरजण कोणती जहगिर मिललि",
+        "मलोजिरजण कोणती जमिन मिललि",
+        "त्यांना पुने-सुपे का देन्यत अले",
+        "जगिर गिवेन मलोजि"
+      ],
+      "answer": {
+        "mr": "मालोजीराजांना पुणे आणि सुपे ही जहागीर मिळाली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shahajiraje bhosale kona hote?",
+      "variants": [
+        "Shahaji maharaja kona?",
+        "Shivaji maharajanche vadila kona?",
+        "Who was Shahaji Raje?",
+        "शहाजीराजे भोसले कोण होते",
+        "शहाजी महाराज कोण",
+        "शिवाजी महाराजांचे वदिल कोण",
+        "शहाजी रजे"
+      ],
+      "answer": {
+        "mr": "शहाजीराजे भोसले हे शिवाजी महाराजांचे वडील आणि शूर सरदार होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shahajiraje konatya sattanmadhye kama karata hote?",
+      "variants": [
+        "Shahaji maharajanni konachya seveta kama kele?",
+        "Te konatya badashahanchya sainyata hote?",
+        "Which rulers did Shahaji serve?",
+        "शहाजीराजे कोणत्या सत्तन्मध्ये काम करता होते",
+        "शहाजी महाराजांनी कोनच्य सेवेत काम केले",
+        "ते कोणत्या बदशहन्च्य सैन्यत होते",
+        "रुलेर्स शहाजी सेर्वे"
+      ],
+      "answer": {
+        "mr": "शहाजीराजे यांनी निजामशहा आणि आदिलशहा यांच्या सेवेत काम केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shahajiraje parakrami ka manale jatata?",
+      "variants": [
+        "Shahaji maharajanche shaurya kaya hote?",
+        "Te dhadasi kase hote?",
+        "Why is Shahaji considered brave?",
+        "शहाजीराजे परक्रमि का मनले जतत",
+        "शहाजी महाराजांचे शौर्य काय होते",
+        "ते धदसि कसे होते",
+        "शहाजी कोन्सिदेरेद ब्रवे"
+      ],
+      "answer": {
+        "mr": "शहाजीराजे युद्धकौशल्य आणि धैर्यामुळे पराक्रमी म्हणून ओळखले जातात."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Jijabai kona hotya?",
+      "variants": [
+        "Rajamata jijau kona?",
+        "Shivaji maharajanchi ai kona?",
+        "Who was Jijabai?",
+        "जिजाबाई कोण होत्य",
+        "रजमत जिजौ कोण",
+        "शिवाजी महरजन्चि ऐ कोण",
+        "जिजाबाई"
+      ],
+      "answer": {
+        "mr": "जिजाबाई या शिवाजी महाराजांच्या आई होत्या आणि त्यांनी त्यांना उत्तम संस्कार दिले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Jijabainni shivaji maharajanna kaya shikavale?",
+      "variants": [
+        "Jijaunche sanskara kaya hote?",
+        "Shivajinvara konacha prabhava hota?",
+        "What did Jijabai teach Shivaji?",
+        "जिजाबाईंनी शिवाजी महाराजांना काय शिकवले",
+        "जिजौन्चे सन्स्कर काय होते",
+        "शिवजिन्वर कोनच प्रभाव होता",
+        "जिजाबाई तेअच शिवाजी"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंनी शिवाजी महाराजांना धर्म, न्याय आणि स्वराज्याची प्रेरणा दिली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Bhosale gharanyachi vaishishhtye konati hoti?",
+      "variants": [
+        "Bhosalyanche guna kaya hote?",
+        "He gharane visheshha ka hote?",
+        "What were the qualities of Bhosale family?",
+        "भोसले घरन्यचि वैशिष्त्ये कोणती होती",
+        "भोसल्यन्चे गुन काय होते",
+        "हे घरने विशेष का होते",
+        "कुअलितिएस भोसले फमिल्य"
+      ],
+      "answer": {
+        "mr": "भोसले घराणे शौर्य, कर्तृत्व आणि दूरदृष्टीसाठी ओळखले जात होते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Maratha saradaranni maharashhtrata kaya japale?",
+      "variants": [
+        "Saradaranni konati paranpara nirmana keli?",
+        "Tyanni samajala kaya dile?",
+        "What tradition did Maratha sardars build?",
+        "मराठा सरदरणि महाराष्ट्रात काय जपले",
+        "सरदरणि कोणती परन्पर निर्माण केली",
+        "त्यांनी समाजाला काय दिले",
+        "त्रदितिओन मराठा सर्दर्स बुइल्द"
+      ],
+      "answer": {
+        "mr": "मराठा सरदारांनी शौर्य आणि युद्धकौशल्याची परंपरा निर्माण केली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shahajirajancha svarajyavara kasa parinama jhala?",
+      "variants": [
+        "Shahaji maharajancha svarajyashi kaya sanbandha?",
+        "Tyancha shivajinvara prabhava hota ka?",
+        "How did Shahaji influence Swarajya?",
+        "शहजिरजन्च स्वरज्यवर कसा परिनम झाला",
+        "शहाजी महाराजांचा स्वरज्यशि काय सन्बन्ध",
+        "त्यांचा शिवजिन्वर प्रभाव होता का",
+        "शहाजी इन्फ्लुएन्के स्वराज्य"
+      ],
+      "answer": {
+        "mr": "शहाजीराजांच्या अनुभवामुळे शिवाजी महाराजांना राजकारण आणि युद्धकौशल्य शिकायला मदत झाली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shahajiraje konatya karanamule prasiddha hote?",
+      "variants": [
+        "Shahaji maharajanche visheshha kaya hote?",
+        "Tyanchi olakha kashamule hoti?",
+        "Why was Shahaji famous?",
+        "शहाजीराजे कोणत्या करनमुले प्रसिद्ध होते",
+        "शहाजी महाराजांचे विशेष काय होते",
+        "त्यांची ओलख कशमुले होती",
+        "शहाजी फमोउस"
+      ],
+      "answer": {
+        "mr": "शहाजीराजे त्यांच्या शौर्य, युद्धकौशल्य आणि राजकारणातील अनुभवामुळे प्रसिद्ध होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shahajirajanni konakonatya pradeshata kama kele?",
+      "variants": [
+        "Shahaji maharaja kuthe karyarata hote?",
+        "Tyanni konatya bhagata seva keli?",
+        "In which regions did Shahaji serve?",
+        "शहजिरजणि कोनकोनत्य प्रदेशत काम केले",
+        "शहाजी महाराज कुठे कर्यरत होते",
+        "त्यांनी कोणत्या भगत सेव केली",
+        "रेगिओन्स शहाजी सेर्वे"
+      ],
+      "answer": {
+        "mr": "शहाजीराजांनी महाराष्ट्र, कर्नाटक आणि दक्षिण भारतातील भागात काम केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Bhosale gharanyachi jahagira kuthe hoti?",
+      "variants": [
+        "Bhosalyanna konati jamina milali hoti?",
+        "Tyanchi mukhya jahagira konati?",
+        "Where was the Bhosale jagir?",
+        "भोसले घरन्यचि जहगिर कुठे होती",
+        "भोसल्यण कोणती जमिन मिललि होती",
+        "त्यांची मुख्य जहगिर कोणती",
+        "भोसले जगिर"
+      ],
+      "answer": {
+        "mr": "भोसले घराण्याची जहागीर पुणे, सुपे आणि आसपासच्या भागात होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Maratha saradara yuddhata kase ladhata asata?",
+      "variants": [
+        "Marathyanchi yuddhapaddhati kashi hoti?",
+        "Saradaranche ladhanyache kaushalya kase hote?",
+        "How did Maratha sardars fight?",
+        "मराठा सरदार युद्धत कसे लधत असत",
+        "मरथ्यन्चि युद्धपद्धति कशी होती",
+        "सरदरन्चे लधन्यचे कौशल्य कसे होते",
+        "मराठा सर्दर्स फिघ्त"
+      ],
+      "answer": {
+        "mr": "मराठा सरदार वेगवान हल्ले, धाडसी रणनीती आणि चातुर्याने युद्ध करत असत."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shahajirajanni shivaji maharajanna konati madata keli?",
+      "variants": [
+        "Shivajinna vadilankaduna kaya shikayala milale?",
+        "Shahaji maharajancha prabhava kaya hota?",
+        "How did Shahaji help Shivaji?",
+        "शहजिरजणि शिवाजी महाराजांना कोणती मदत केली",
+        "शिवाजींना वदिलन्कदुन काय शिकयल मिलले",
+        "शहाजी महाराजांचा प्रभाव काय होता",
+        "शहाजी हेल्प शिवाजी"
+      ],
+      "answer": {
+        "mr": "शहाजीराजांच्या अनुभवामुळे शिवाजी महाराजांना प्रशासन आणि युद्धाचे धडे मिळाले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Jijabaincha svarajya sankalpata kaya vata hota?",
+      "variants": [
+        "Jijaunchi bhumika kaya hoti?",
+        "Shivajinna prerana koni dili?",
+        "What was Jijabai’s role in Swarajya?",
+        "जिजबैन्च स्वराज्य सन्कल्पत काय वत होता",
+        "जिजौन्चि भूमिका काय होती",
+        "शिवाजींना प्रेरणा कोणी दिली",
+        "जिजाबाई’स रोले स्वराज्य"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंनी शिवाजी महाराजांच्या मनात स्वराज्याची प्रेरणा आणि संस्कार रुजवले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Bhosale gharanyachi paranpara kashi hoti?",
+      "variants": [
+        "Bhosalyancha varasa kasa hota?",
+        "He gharane kase hote?",
+        "What was the tradition of Bhosale family?",
+        "भोसले घरन्यचि परन्पर कशी होती",
+        "भोसल्यन्च वरस कसा होता",
+        "हे घरने कसे होते",
+        "त्रदितिओन भोसले फमिल्य"
+      ],
+      "answer": {
+        "mr": "भोसले घराण्याची परंपरा शौर्य, निष्ठा आणि कर्तृत्वाची होती."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Maratha saradaranchi pramukha takada kaya hoti?",
+      "variants": [
+        "Marathyanchi takada kashata hoti?",
+        "Tyanche samarthya kaya hote?",
+        "What was the strength of Maratha sardars?",
+        "मराठा सरदरन्चि प्रमुख तकद काय होती",
+        "मरथ्यन्चि तकद कशत होती",
+        "त्यांचे समर्थ्य काय होते",
+        "स्त्रेन्ग्थ मराठा सर्दर्स"
+      ],
+      "answer": {
+        "mr": "त्यांची प्रमुख ताकद धैर्य, घोडदळ आणि जलद हालचालींमध्ये होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shahajiraje kadhi adachanita ale hote ka?",
+      "variants": [
+        "Shahaji maharajanna kaida karanyata ale hote ka?",
+        "Tyanna sankatancha samana karava lagala ka?",
+        "Did Shahaji face difficulties?",
+        "शहाजीराजे कधी अदचनित अले होते का",
+        "शहाजी महाराजांना कैद करन्यत अले होते का",
+        "त्यांना सन्कतन्च समान करव लगल का",
+        "शहाजी फके दिफ्फिकुल्तिएस"
+      ],
+      "answer": {
+        "mr": "हो, राजकीय बदलांमुळे शहाजीराजांना अनेक संकटांचा सामना करावा लागला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Bhosale gharanyamule maharashhtrata kaya nirmana jhale?",
+      "variants": [
+        "Bhosalyanche yogadana kaya hote?",
+        "Tyanchya karyacha parinama kaya?",
+        "What was the impact of Bhosale family?",
+        "भोसले घरन्यमुले महाराष्ट्रात काय निर्माण झाले",
+        "भोसल्यन्चे योगदन काय होते",
+        "त्यांच्या कर्यच परिनम काय",
+        "इम्पक्त भोसले फमिल्य"
+      ],
+      "answer": {
+        "mr": "भोसले घराण्यामुळे महाराष्ट्रात स्वराज्याची बीजे पेरली गेली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Maratha saradaranni parakiya sattanmadhye kama karuna kaya shikale?",
+      "variants": [
+        "Tyanna kaya anubhava milala?",
+        "Saradaranni kaya atmasata kele?",
+        "What did they learn from serving rulers?",
+        "मराठा सरदरणि परकिय सत्तन्मध्ये काम करुणा काय शिकले",
+        "त्यांना काय अनुभव मिलल",
+        "सरदरणि काय अत्मसत केले",
+        "थेय शिका फ्रोम सेर्विन्ग रुलेर्स"
+      ],
+      "answer": {
+        "mr": "त्यांनी प्रशासन, युद्धकौशल्य आणि राजकारणाचे धडे शिकले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya balapanavara konacha prabhava hota?",
+      "variants": [
+        "Shivajinvara konache sanskara hote?",
+        "Tyanna prerana koni dili?",
+        "Who influenced Shivaji’s childhood?",
+        "शिवाजी महाराजांच्या बलपनवर कोनच प्रभाव होता",
+        "शिवजिन्वर कोनचे सन्स्कर होते",
+        "त्यांना प्रेरणा कोणी दिली",
+        "इन्फ्लुएन्केद शिवाजी’स चिल्धूद"
+      ],
+      "answer": {
+        "mr": "जिजाबाई आणि शहाजीराजे यांच्या संस्कारांचा शिवाजी महाराजांवर मोठा प्रभाव होता."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Bhosale gharanyacha itihasa ka mahattvacha ahe?",
+      "variants": [
+        "Bhosalyanche mahattva kaya?",
+        "He gharane ka abhyasave?",
+        "Why is Bhosale history important?",
+        "भोसले घरन्यच इतिहस का महत्त्वच आहे",
+        "भोसल्यन्चे महत्त्व काय",
+        "हे घरने का अभ्यसवे",
+        "भोसले हिस्तोर्य महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "कारण या घराण्याने स्वराज्य स्थापनेत महत्त्वाची भूमिका बजावली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Maratha saradaranchi nishhtha kashi hoti?",
+      "variants": [
+        "Saradara kiti vishvasu hote?",
+        "Tyanchi nishhtha konasathi hoti?",
+        "How loyal were Maratha sardars?",
+        "मराठा सरदरन्चि निष्थ कशी होती",
+        "सरदार किती विश्वसु होते",
+        "त्यांची निष्थ कोनसथि होती",
+        "लोयल मराठा सर्दर्स"
+      ],
+      "answer": {
+        "mr": "मराठा सरदार आपल्या कर्तव्याबद्दल निष्ठावान आणि प्रामाणिक होते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajancha janma kadhi jhala?",
+      "variants": [
+        "Shivaji maharajancha janmadina konata?",
+        "Shivarayancha janma konatya varshhi jhala?",
+        "When was Shivaji Maharaj born?",
+        "शिवाजी महाराजांचा जन्म कधी झाला",
+        "शिवाजी महाराजांचा जन्मदिन कोणता",
+        "शिवरयन्च जन्म कोणत्या वर्षि झाला",
+        "शिवाजी महाराज बोर्न"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांचा जन्म १९ फेब्रुवारी १६३० रोजी झाला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajancha janma kuthe jhala?",
+      "variants": [
+        "Shivarayancha janmasthana konate?",
+        "Shivaji maharaja kuthe janmale?",
+        "Where was Shivaji Maharaj born?",
+        "शिवाजी महाराजांचा जन्म कुठे झाला",
+        "शिवरयन्च जन्मस्थन कोणते",
+        "शिवाजी महाराज कुठे जन्मले",
+        "शिवाजी महाराज बोर्न"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांचा जन्म शिवनेरी किल्ल्यावर झाला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanchya aiche nava kaya hote?",
+      "variants": [
+        "Shivaji maharajanchi ai kona?",
+        "Jijau kona hotya?",
+        "Who was Shivaji’s mother?",
+        "शिवाजी महाराजांच्या ऐचे नवीन काय होते",
+        "शिवाजी महरजन्चि ऐ कोण",
+        "जिजौ कोण होत्य",
+        "शिवाजी’स मोथेर"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांच्या आईचे नाव जिजाबाई होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanchya vadilanche nava kaya hote?",
+      "variants": [
+        "Shivaji maharajanche vadila kona?",
+        "Shahajiraje kona hote?",
+        "Who was Shivaji’s father?",
+        "शिवाजी महाराजांच्या वदिलन्चे नवीन काय होते",
+        "शिवाजी महाराजांचे वदिल कोण",
+        "शहाजीराजे कोण होते",
+        "शिवाजी’स फथेर"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांच्या वडिलांचे नाव शहाजीराजे भोसले होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanche balapana kuthe gele?",
+      "variants": [
+        "Shivaraya kuthe vadhale?",
+        "Tyanche lahanapana kuthe gele?",
+        "Where did Shivaji spend his childhood?",
+        "शिवाजी महाराजांचे बलपन कुठे गेले",
+        "शिवरय कुठे वधले",
+        "त्यांचे लहनपन कुठे गेले",
+        "शिवाजी स्पेन्द हिस चिल्धूद"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांचे बालपण पुणे आणि शिवनेरी परिसरात गेले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Jijabainni shivaji maharajanna kase sanskara dile?",
+      "variants": [
+        "Jijaunche shivajinvara kaya sanskara hote?",
+        "Tyanni kaya shikavale?",
+        "How did Jijabai shape Shivaji?",
+        "जिजाबाईंनी शिवाजी महाराजांना कसे सन्स्कर दिले",
+        "जिजौन्चे शिवजिन्वर काय सन्स्कर होते",
+        "त्यांनी काय शिकवले",
+        "जिजाबाई शपे शिवाजी"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंनी त्यांना धर्म, न्याय, धैर्य आणि स्वराज्याची प्रेरणा दिली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanna konatya katha aikayala milata?",
+      "variants": [
+        "Jijabai konatya katha sangata?",
+        "Shivajinna prerana kuthuna milali?",
+        "What stories inspired Shivaji?",
+        "शिवाजी महाराजांना कोणत्या कथ ऐकयल मिलत",
+        "जिजाबाई कोणत्या कथ सन्गत",
+        "शिवाजींना प्रेरणा कुथुन मिललि",
+        "स्तोरिएस इन्स्पिरेद शिवाजी"
+      ],
+      "answer": {
+        "mr": "त्यांना रामायण, महाभारत आणि वीरांच्या कथा ऐकायला मिळत."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharaja lahanapani kase hote?",
+      "variants": [
+        "Balashivaji kase hote?",
+        "Tyancha svabhava kasa hota?",
+        "What was Shivaji like as a child?",
+        "शिवाजी महाराज लहनपनि कसे होते",
+        "बलशिवजि कसे होते",
+        "त्यांचा स्वभव कसा होता",
+        "शिवाजी लिके अस चिल्द"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराज लहानपणी धाडसी, जिज्ञासू आणि स्वाभिमानी होते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanna balapani konacha sahavasa milala?",
+      "variants": [
+        "Tyanna konachi satha hoti?",
+        "Tyanche balamitra kona hote?",
+        "Who accompanied Shivaji in childhood?",
+        "शिवाजी महाराजांना बलपनि कोनच सहवस मिलल",
+        "त्यांना कोनचि सथ होती",
+        "त्यांचे बलमित्र कोण होते",
+        "अक्कोम्पनिएद शिवाजी चिल्धूद"
+      ],
+      "answer": {
+        "mr": "त्यांना मावळातील शूर मुलांचा आणि विश्वासू साथीदारांचा सहवास मिळाला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Balashivajinna killyanche mahattva kase kalale?",
+      "variants": [
+        "Shivajinna killyanchi avada ka hoti?",
+        "Tyanni kille pahile hote ka?",
+        "How did Shivaji understand the importance of forts?",
+        "बलशिवजिण किल्ल्यन्चे महत्त्व कसे कलले",
+        "शिवाजींना किल्ल्यन्चि अवद का होती",
+        "त्यांनी किल्ले पहिले होते का",
+        "शिवाजी उन्देर्स्तन्द इम्पोर्तन्के फोर्त्स"
+      ],
+      "answer": {
+        "mr": "लहानपणी किल्ल्यांवर राहिल्यामुळे त्यांना किल्ल्यांचे संरक्षणात्मक महत्त्व समजले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajancha svabhava kashamule ghadala?",
+      "variants": [
+        "Tyanchya vyaktimattvavara konacha prabhava hota?",
+        "Tyancha charitrya vikasa kasa jhala?",
+        "How was Shivaji’s character shaped?",
+        "शिवाजी महाराजांचा स्वभव कशमुले घदल",
+        "त्यांच्या व्यक्तिमत्त्ववर कोनच प्रभाव होता",
+        "त्यांचा चरित्र्य विकस कसा झाला",
+        "शिवाजी’स चरक्तेर शपेद"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंचे संस्कार आणि बालपणातील अनुभवांमुळे त्यांचा स्वभाव घडला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Balapani shivaji maharajanna konate dhade milale?",
+      "variants": [
+        "Shivajinni lahanapani kaya shikale?",
+        "Tyanna konatya goshhti shikavalya gelya?",
+        "What lessons did Shivaji learn as a child?",
+        "बलपनि शिवाजी महाराजांना कोणते धदे मिलले",
+        "शिवजिणि लहनपनि काय शिकले",
+        "त्यांना कोणत्या गोष्ति शिकवल्य गेल्य",
+        "लेस्सोन्स शिवाजी शिका अस चिल्द"
+      ],
+      "answer": {
+        "mr": "त्यांनी प्रामाणिकपणा, धैर्य आणि स्वाभिमानाचे धडे शिकले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanchya balapani punyachi vyavastha kona pahata hote?",
+      "variants": [
+        "Punyachi jahagira kona sanbhalata hote?",
+        "Dadoji kondadeva kona hote?",
+        "Who managed Pune during Shivaji’s childhood?",
+        "शिवाजी महाराजांच्या बलपनि पुन्यचि व्यवस्थ कोण पहत होते",
+        "पुन्यचि जहगिर कोण सन्भलत होते",
+        "ददोजि कोन्ददेव कोण होते",
+        "मनगेद पुने दुरिन्ग शिवाजी’स चिल्धूद"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांच्या बालपणी पुण्याची व्यवस्था दादोजी कोंडदेव पाहत होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Dadoji kondadevanni shivaji maharajanna kaya shikavale?",
+      "variants": [
+        "Dadojinchi bhumika kaya hoti?",
+        "Shivajinna prashikshhana koni dile?",
+        "What did Dadoji teach Shivaji?",
+        "ददोजि कोन्ददेवणि शिवाजी महाराजांना काय शिकवले",
+        "ददोजिन्चि भूमिका काय होती",
+        "शिवाजींना प्रशिक्षन कोणी दिले",
+        "ददोजि तेअच शिवाजी"
+      ],
+      "answer": {
+        "mr": "दादोजी कोंडदेवांनी त्यांना शिस्त, प्रशासन आणि युद्धकौशल्य शिकवले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna lahanapani konatya khelanchi avada hoti?",
+      "variants": [
+        "Balashivaji kaya khelata?",
+        "Tyanna konate khela avadata hote?",
+        "What games did young Shivaji like?",
+        "शिवाजी महाराजांना लहनपनि कोणत्या खेलन्चि अवद होती",
+        "बलशिवजि काय खेलत",
+        "त्यांना कोणते खेल अवदत होते",
+        "गमेस योउन्ग शिवाजी लिके"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांना घोडेस्वारी, तलवारबाजी आणि मल्लखांब यांसारख्या खेळांची आवड होती."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharaja lahanapani killyanvara ka jata asata?",
+      "variants": [
+        "Tyanna kille ka avadata?",
+        "Shivaji killyanvara kaya shikata hote?",
+        "Why did Shivaji visit forts?",
+        "शिवाजी महाराज लहनपनि किल्ल्यन्वर का जातात असत",
+        "त्यांना किल्ले का अवदत",
+        "शिवाजी किल्ल्यन्वर काय शिकत होते",
+        "शिवाजी विसित फोर्त्स"
+      ],
+      "answer": {
+        "mr": "किल्ल्यांची रचना आणि संरक्षण समजून घेण्यासाठी ते किल्ल्यांवर जात असत."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanna svarajyachi prerana kashi milali?",
+      "variants": [
+        "Tyanna svarajyacha vichara kasa suchala?",
+        "Svarajyacha sankalpa koni dila?",
+        "How did Shivaji get the idea of Swarajya?",
+        "शिवाजी महाराजांना स्वराज्याची प्रेरणा कशी मिललि",
+        "त्यांना स्वराज्याचा विचार कसा सुचल",
+        "स्वराज्याचा सन्कल्प कोणी दिला",
+        "शिवाजी गेत इदेअ स्वराज्य"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंच्या संस्कारांमुळे आणि अन्याय पाहून त्यांना स्वराज्याची प्रेरणा मिळाली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Balashivajinmadhye konate netrritvaguna disata hote?",
+      "variants": [
+        "Shivaji lahanapani neta hote ka?",
+        "Tyanchyata konate guna hote?",
+        "What leadership qualities did young Shivaji show?",
+        "बलशिवजिन्मध्ये कोणते नेत्र्रित्वगुन दिसतो होते",
+        "शिवाजी लहनपनि नेत होते का",
+        "त्यन्च्यत कोणते गुन होते",
+        "लेअदेर्शिप कुअलितिएस योउन्ग शिवाजी शोव"
+      ],
+      "answer": {
+        "mr": "लहानपणीच त्यांच्यात धैर्य, निर्णयक्षमता आणि लोकांना एकत्र आणण्याची क्षमता दिसत होती."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Mavalyancha shivaji maharajanvara kasa prabhava hota?",
+      "variants": [
+        "Mavale kona hote?",
+        "Shivajinchya balamitranchi bhumika kaya?",
+        "What role did Mavalas play?",
+        "मवल्यन्च शिवाजी महरजन्वर कसा प्रभाव होता",
+        "मवले कोण होते",
+        "शिवाजींच्या बलमित्रन्चि भूमिका काय",
+        "रोले मवलस प्लय"
+      ],
+      "answer": {
+        "mr": "मावळे शूर आणि निष्ठावान होते, त्यांचा शिवाजी महाराजांवर सकारात्मक प्रभाव होता."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanni balapani konatya goshhtincha virodha kela?",
+      "variants": [
+        "Tyanna anyaya sahana hota hota ka?",
+        "Shivaji anyayaviruddha hote ka?",
+        "Did young Shivaji oppose injustice?",
+        "शिवाजी महाराजांनी बलपनि कोणत्या गोष्तिन्च विरोध केला",
+        "त्यांना अन्याय सहन होता होता का",
+        "शिवाजी अन्ययविरुद्ध होते का",
+        "योउन्ग शिवाजी ओप्पोसे इन्जुस्तिके"
+      ],
+      "answer": {
+        "mr": "हो, लहानपणीच त्यांनी अन्याय आणि अत्याचारांचा विरोध करण्याची भावना ठेवली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanche balapana kathina ka hote?",
+      "variants": [
+        "Tyanna adachani hotya ka?",
+        "Balapanata konate sankata hote?",
+        "Was Shivaji’s childhood difficult?",
+        "शिवाजी महाराजांचे बलपन कथिन का होते",
+        "त्यांना अदचनि होत्य का",
+        "बलपनत कोणते सन्कत होते",
+        "शिवाजी’स चिल्धूद दिफ्फिकुल्त"
+      ],
+      "answer": {
+        "mr": "त्या काळात राजकीय अस्थिरता होती, त्यामुळे त्यांचे बालपण आव्हानात्मक होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna dharmachi shikavana koni dili?",
+      "variants": [
+        "Shivajinna dharmika sanskara koni dile?",
+        "Tyanna dharmajnana kase milale?",
+        "Who taught Shivaji about religion?",
+        "शिवाजी महाराजांना धर्मचि शिकवन कोणी दिली",
+        "शिवाजींना धर्मिक सन्स्कर कोणी दिले",
+        "त्यांना धर्मज्नन कसे मिलले",
+        "तौघ्त शिवाजी अबोउत रेलिगिओन"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंनी त्यांना धर्म आणि सदाचाराची शिकवण दिली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni lahanapani konati shapatha ghetali hoti?",
+      "variants": [
+        "Balashivajincha sankalpa kaya hota?",
+        "Tyanni kaya tharavale hote?",
+        "Did Shivaji take a vow in childhood?",
+        "शिवाजी महाराजांनी लहनपनि कोणती शपथ घेतलि होती",
+        "बलशिवजिन्च सन्कल्प काय होता",
+        "त्यांनी काय थरवले होते",
+        "शिवाजी तके वोव चिल्धूद"
+      ],
+      "answer": {
+        "mr": "लहानपणीच त्यांनी अन्यायमुक्त आणि स्वतंत्र राज्य निर्माण करण्याचा संकल्प केला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya vyaktimattvavara konacha sarvadhika prabhava hota?",
+      "variants": [
+        "Tyanchya ayushhyatila sarvata mothi prerana kona?",
+        "Shivajinvara konacha prabhava hota?",
+        "Who influenced Shivaji the most?",
+        "शिवाजी महाराजांच्या व्यक्तिमत्त्ववर कोनच सर्वधिक प्रभाव होता",
+        "त्यांच्या अयुष्यतिल सर्वत मोठी प्रेरणा कोण",
+        "शिवजिन्वर कोनच प्रभाव होता",
+        "इन्फ्लुएन्केद शिवाजी मोस्त"
+      ],
+      "answer": {
+        "mr": "त्यांच्या व्यक्तिमत्त्वावर जिजाबाईंचा सर्वाधिक प्रभाव होता."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanna shikshhana koni dile?",
+      "variants": [
+        "Shivaji maharajanche guru kona hote?",
+        "Tyanna prashikshhana koni dile?",
+        "Who educated Shivaji Maharaj?",
+        "शिवाजी महाराजांना शिक्षण कोणी दिले",
+        "शिवाजी महाराजांचे गुरु कोण होते",
+        "त्यांना प्रशिक्षन कोणी दिले",
+        "एदुकतेद शिवाजी महाराज"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांना दादोजी कोंडदेव आणि जिजाबाई यांनी शिक्षण व प्रशिक्षण दिले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna konatya vishhayanche shikshhana dile gele?",
+      "variants": [
+        "Tyanni kaya kaya shikale?",
+        "Shivaji maharajanche shikshhana kashata jhale?",
+        "What subjects did Shivaji learn?",
+        "शिवाजी महाराजांना कोणत्या विषयन्चे शिक्षण दिले गेले",
+        "त्यांनी काय काय शिकले",
+        "शिवाजी महाराजांचे शिक्षण कशत झाले",
+        "सुब्जेक्त्स शिवाजी शिका"
+      ],
+      "answer": {
+        "mr": "त्यांना धर्मज्ञान, प्रशासन, युद्धकौशल्य आणि शस्त्रविद्या यांचे शिक्षण दिले गेले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna ghodesvari ka shikavali geli?",
+      "variants": [
+        "Ghodesvariche mahattva kaya hote?",
+        "Tyanni ghodesvari ka shikali?",
+        "Why did Shivaji learn horse riding?",
+        "शिवाजी महाराजांना घोदेस्वरि का शिकवलि गेली",
+        "घोदेस्वरिचे महत्त्व काय होते",
+        "त्यांनी घोदेस्वरि का शिकलि",
+        "शिवाजी शिका होर्से रिदिन्ग"
+      ],
+      "answer": {
+        "mr": "युद्धासाठी आणि जलद हालचालींसाठी घोडेस्वारी अत्यंत महत्त्वाची होती म्हणून ती शिकवली गेली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanna talavarabajiche prashikshhana ka dile gele?",
+      "variants": [
+        "Tyanni talavara chalavayala ka shikale?",
+        "Talavaravidyeche mahattva kaya?",
+        "Why was sword training given to Shivaji?",
+        "शिवाजी महाराजांना तलवरबजिचे प्रशिक्षन का दिले गेले",
+        "त्यांनी तलवर चलवयल का शिकले",
+        "तलवरविद्येचे महत्त्व काय",
+        "स्वोर्द त्रैनिन्ग गिवेन शिवाजी"
+      ],
+      "answer": {
+        "mr": "स्वसंरक्षण आणि युद्धासाठी तलवारबाजी आवश्यक होती म्हणून त्यांना त्याचे प्रशिक्षण दिले गेले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata jijabainchi bhumika kaya hoti?",
+      "variants": [
+        "Jijaunni kaya shikavale?",
+        "Shivajinna sanskara koni dile?",
+        "What was Jijabai’s role in Shivaji’s education?",
+        "शिवाजी महाराजांच्या शिक्षनत जिजबैन्चि भूमिका काय होती",
+        "जिजौणि काय शिकवले",
+        "शिवाजींना सन्स्कर कोणी दिले",
+        "जिजाबाई’स रोले शिवाजी’स एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंनी त्यांना धर्म, नैतिकता आणि स्वराज्याची प्रेरणा दिली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Dadoji kondadevanni shivaji maharajanna kashache prashikshhana dile?",
+      "variants": [
+        "Dadojinche shikshhana kashata hote?",
+        "Shivajinna yuddhakaushalya koni shikavale?",
+        "What training did Dadoji give?",
+        "ददोजि कोन्ददेवणि शिवाजी महाराजांना कशचे प्रशिक्षन दिले",
+        "ददोजिन्चे शिक्षण कशत होते",
+        "शिवाजींना युद्धकौशल्य कोणी शिकवले",
+        "त्रैनिन्ग ददोजि गिवे"
+      ],
+      "answer": {
+        "mr": "दादोजी कोंडदेवांनी त्यांना शिस्त, प्रशासन आणि युद्धतंत्र शिकवले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna prashasanache jnana ka avashyaka hote?",
+      "variants": [
+        "Rajakaranache shikshhana ka dile gele?",
+        "Prashasana shikanyache karana kaya?",
+        "Why was administrative knowledge important?",
+        "शिवाजी महाराजांना प्रशसनचे ज्नन का आवश्यक होते",
+        "रजकरनचे शिक्षण का दिले गेले",
+        "प्रशासन शिकन्यचे कारण काय",
+        "अद्मिनिस्त्रतिवे क्नोव्लेद्गे महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "स्वराज्य चालवण्यासाठी योग्य प्रशासनाचे ज्ञान आवश्यक होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata dharmajnanacha samavesha ka hota?",
+      "variants": [
+        "Dharmajnanache mahattva kaya?",
+        "Tyanna dharmika shikshhana ka dile?",
+        "Why was religious education included?",
+        "शिवाजी महाराजांच्या शिक्षनत धर्मज्ननच समवेश का होता",
+        "धर्मज्ननचे महत्त्व काय",
+        "त्यांना धर्मिक शिक्षण का दिले",
+        "रेलिगिओउस एदुकतिओन इन्क्लुदेद"
+      ],
+      "answer": {
+        "mr": "न्याय, सदाचार आणि नैतिकतेची जाणीव व्हावी म्हणून धर्मज्ञान दिले गेले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni lahanapani killyanchi mahiti kashi ghetali?",
+      "variants": [
+        "Tyanni kille kase abhyasale?",
+        "Killyanche mahattva kase samajale?",
+        "How did Shivaji study forts?",
+        "शिवाजी महाराजांनी लहनपनि किल्ल्यन्चि माहिती कशी घेतलि",
+        "त्यांनी किल्ले कसे अभ्यसले",
+        "किल्ल्यन्चे महत्त्व कसे समजले",
+        "शिवाजी स्तुद्य फोर्त्स"
+      ],
+      "answer": {
+        "mr": "ते प्रत्यक्ष किल्ल्यांवर जाऊन त्यांची रचना आणि संरक्षणव्यवस्था अभ्यासत असत."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanacha tyanchya vyaktimattvavara kasa parinama jhala?",
+      "variants": [
+        "Shikshhanamule kaya badala jhala?",
+        "Tyanchya svabhavavara shikshhanacha prabhava hota ka?",
+        "How did education shape Shivaji?",
+        "शिवाजी महाराजांच्या शिक्षनच त्यांच्या व्यक्तिमत्त्ववर कसा परिनम झाला",
+        "शिक्षनमुले काय बदल झाला",
+        "त्यांच्या स्वभववर शिक्षनच प्रभाव होता का",
+        "एदुकतिओन शपे शिवाजी"
+      ],
+      "answer": {
+        "mr": "शिक्षणामुळे ते शिस्तबद्ध, धाडसी आणि दूरदृष्टी असलेले नेते बनले."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni shatrunchi mahiti kashi milavali?",
+      "variants": [
+        "Tyanna gupta mahiti kashi milata ase?",
+        "Shatrunchi mahiti ka avashyaka hoti?",
+        "How did Shivaji gather enemy information?",
+        "शिवाजी महाराजांनी शत्रुन्चि माहिती कशी मिलवलि",
+        "त्यांना गुप्त माहिती कशी मिलत असे",
+        "शत्रुन्चि माहिती का आवश्यक होती",
+        "शिवाजी गथेर एनेम्य इन्फोर्मतिओन"
+      ],
+      "answer": {
+        "mr": "त्यांनी गुप्तहेरांच्या मदतीने शत्रूंची माहिती मिळवण्याचे कौशल्य शिकले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata sharirika prashikshhanache mahattva kaya hote?",
+      "variants": [
+        "Vyayama ka avashyaka hota?",
+        "Sharirika takada ka mahattvachi hoti?",
+        "Why was physical training important?",
+        "शिवाजी महाराजांच्या शिक्षनत शरिरिक प्रशिक्षनचे महत्त्व काय होते",
+        "व्ययम का आवश्यक होता",
+        "शरिरिक तकद का महत्त्वचि होती",
+        "फ्य्सिकल त्रैनिन्ग महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "युद्धासाठी मजबूत शरीर आणि सहनशक्ती आवश्यक होती."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanna nakashe ani pradeshanchi mahiti ka shikavali geli?",
+      "variants": [
+        "Pradeshanchi mahiti ka mahattvachi hoti?",
+        "Shivajinna bhaugolika jnana ka dile gele?",
+        "Why was geography taught to Shivaji?",
+        "शिवाजी महाराजांना नकशे आणि प्रदेशन्चि माहिती का शिकवलि गेली",
+        "प्रदेशन्चि माहिती का महत्त्वचि होती",
+        "शिवाजींना भौगोलिक ज्नन का दिले गेले",
+        "गेओग्रफ्य तौघ्त शिवाजी"
+      ],
+      "answer": {
+        "mr": "प्रदेशांची माहिती असल्यामुळे युद्धनीती आखणे आणि संरक्षण करणे सोपे होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni konakonati shastre hatalayala shikali?",
+      "variants": [
+        "Tyanna konatya shastranche prashikshhana hote?",
+        "Shivajinni talavarishivaya anakhi kaya shikale?",
+        "What weapons did Shivaji learn to use?",
+        "शिवाजी महाराजांनी कोनकोनति शस्त्रे हतलयल शिकलि",
+        "त्यांना कोणत्या शस्त्रन्चे प्रशिक्षन होते",
+        "शिवजिणि तलवरिशिवय अनखि काय शिकले",
+        "वेअपोन्स शिवाजी शिका उसे"
+      ],
+      "answer": {
+        "mr": "त्यांनी तलवार, भाला, धनुष्यबाण आणि ढाल यांचे प्रशिक्षण घेतले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna shista ka shikavali geli?",
+      "variants": [
+        "Shistiche mahattva kaya hote?",
+        "Shistabaddha jivana ka avashyaka hote?",
+        "Why was discipline important in Shivaji’s education?",
+        "शिवाजी महाराजांना शिस्त का शिकवलि गेली",
+        "शिस्तिचे महत्त्व काय होते",
+        "शिस्तबद्ध जिवन का आवश्यक होते",
+        "दिस्किप्लिने महत्त्वाचे शिवाजी’स एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "शिस्तबद्ध जीवनामुळे सैन्य आणि राज्यकारभार योग्य प्रकारे चालवता येतो."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata rananitiche mahattva kaya hote?",
+      "variants": [
+        "Rananiti ka shikavali geli?",
+        "Yuddhatantrache mahattva kaya?",
+        "Why was strategy important?",
+        "शिवाजी महाराजांच्या शिक्षनत रननितिचे महत्त्व काय होते",
+        "रननिति का शिकवलि गेली",
+        "युद्धतन्त्रचे महत्त्व काय",
+        "स्त्रतेग्य महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "रणनीतीमुळे कमी सैन्य असूनही मोठ्या शत्रूवर विजय मिळवता येतो."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni lokanshi sanvada kasa sadhayala shikale?",
+      "variants": [
+        "Lokanshi vaganyache shikshhana kase milale?",
+        "Tyanna prajeshi sanvada kasa shikavala?",
+        "How did Shivaji learn to communicate with people?",
+        "शिवाजी महाराजांनी लोकन्शि सन्वद कसा सधयल शिकले",
+        "लोकन्शि वगन्यचे शिक्षण कसे मिलले",
+        "त्यांना प्रजेशि सन्वद कसा शिकवल",
+        "शिवाजी शिका कोम्मुनिकते विथ पेओप्ले"
+      ],
+      "answer": {
+        "mr": "त्यांना प्रजेशी आदराने आणि समजूतदारपणे वागण्याचे शिक्षण दिले गेले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni prashasanatila nyayavyavastha ka shikali?",
+      "variants": [
+        "Nyayache shikshhana ka avashyaka hote?",
+        "Rajala nyaya ka mahita asava?",
+        "Why did Shivaji learn about justice?",
+        "शिवाजी महाराजांनी प्रशसनतिल न्ययव्यवस्थ का शिकलि",
+        "न्ययचे शिक्षण का आवश्यक होते",
+        "रजल न्याय का महित असव",
+        "शिवाजी शिका अबोउत जुस्तिके"
+      ],
+      "answer": {
+        "mr": "राजाने प्रजेला योग्य न्याय देण्यासाठी न्यायव्यवस्था समजणे आवश्यक होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanamule tyanna konata atmavishvasa milala?",
+      "variants": [
+        "Shikshhanamule tyanna kaya bala milale?",
+        "Tyanchya atmavishvasache karana kaya?",
+        "How did education build Shivaji’s confidence?",
+        "शिवाजी महाराजांच्या शिक्षनमुले त्यांना कोणता आत्मविश्वास मिलल",
+        "शिक्षनमुले त्यांना काय बल मिलले",
+        "त्यांच्या अत्मविश्वसचे कारण काय",
+        "एदुकतिओन बुइल्द शिवाजी’स कोन्फिदेन्के"
+      ],
+      "answer": {
+        "mr": "शिक्षणामुळे त्यांना योग्य निर्णय घेण्याचा आत्मविश्वास मिळाला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanna killyanche vyavasthapana ka shikavale gele?",
+      "variants": [
+        "Kille sanbhalanyache shikshhana ka?",
+        "Killyanchi jababadari ka mahattvachi?",
+        "Why did Shivaji learn fort management?",
+        "शिवाजी महाराजांना किल्ल्यन्चे व्यवस्थपन का शिकवले गेले",
+        "किल्ले सन्भलन्यचे शिक्षण का",
+        "किल्ल्यन्चि जबबदरि का महत्त्वचि",
+        "शिवाजी शिका फोर्त मनगेमेन्त"
+      ],
+      "answer": {
+        "mr": "किल्ले हे स्वराज्याचे संरक्षणस्थान होते, म्हणून त्यांचे व्यवस्थापन महत्त्वाचे होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni ganimi kavyachi suruvata kashi shikali?",
+      "variants": [
+        "Ganimi kava mhanaje kaya?",
+        "Shivajinni hi paddhata kashi atmasata keli?",
+        "How did Shivaji learn guerrilla warfare?",
+        "शिवाजी महाराजांनी गनिमि कव्यचि सुरुवत कशी शिकलि",
+        "गनिमि कव म्हणजे काय",
+        "शिवजिणि ही पद्धत कशी अत्मसत केली",
+        "शिवाजी शिका गुएर्रिल्ल वर्फरे"
+      ],
+      "answer": {
+        "mr": "परिस्थितीचा अभ्यास करून आणि जलद हल्ल्यांची योजना आखून त्यांनी गनिमी कावा आत्मसात केला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata sanyamache mahattva kaya hote?",
+      "variants": [
+        "Sanyama ka shikavala gela?",
+        "Rajasathi sanyama ka avashyaka ahe?",
+        "Why was patience important?",
+        "शिवाजी महाराजांच्या शिक्षनत सन्यमचे महत्त्व काय होते",
+        "सन्यम का शिकवल गेला",
+        "रजसथि सन्यम का आवश्यक आहे",
+        "पतिएन्के महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "संयमामुळे योग्य वेळी योग्य निर्णय घेता येतो."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni shatrunchya halachali kasha abhyasalya?",
+      "variants": [
+        "Shatrunchi mahiti kashi ghetali jata hoti?",
+        "Shatrunche nirikshhana ka avashyaka hote?",
+        "How did Shivaji study enemy movements?",
+        "शिवाजी महाराजांनी शत्रुन्च्य हलचलि कश अभ्यसल्य",
+        "शत्रुन्चि माहिती कशी घेतलि जातात होती",
+        "शत्रुन्चे निरिक्षन का आवश्यक होते",
+        "शिवाजी स्तुद्य एनेम्य मोवेमेन्त्स"
+      ],
+      "answer": {
+        "mr": "त्यांनी गुप्तहेर आणि स्थानिक लोकांच्या मदतीने शत्रूंची माहिती मिळवली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata naitikateche sthana kaya hote?",
+      "variants": [
+        "Naitikata ka shikavali geli?",
+        "Rajasathi naitikata ka mahattvachi?",
+        "Why was morality important in Shivaji’s education?",
+        "शिवाजी महाराजांच्या शिक्षनत नैतिकतेचे स्थन काय होते",
+        "नैतिकत का शिकवलि गेली",
+        "रजसथि नैतिकत का महत्त्वचि",
+        "मोरलित्य महत्त्वाचे शिवाजी’स एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "नैतिकतेमुळे राज्यकारभार प्रामाणिक आणि न्याय्य राहतो."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata nirnayakshhamata ka mahattvachi hoti?",
+      "variants": [
+        "Nirnaya ghenyache shikshhana ka dile gele?",
+        "Rajasathi nirnayakshhamata ka avashyaka ahe?",
+        "Why was decision-making important in Shivaji’s education?",
+        "शिवाजी महाराजांच्या शिक्षनत निर्नयक्षमत का महत्त्वचि होती",
+        "निर्णय घेन्यचे शिक्षण का दिले गेले",
+        "रजसथि निर्नयक्षमत का आवश्यक आहे",
+        "देकिसिओन-मकिन्ग महत्त्वाचे शिवाजी’स एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "योग्य वेळी योग्य निर्णय घेतल्यामुळे राज्य सुरक्षित आणि मजबूत राहते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni yuddhakaushalya kase atmasata kele?",
+      "variants": [
+        "Tyanni yuddhatantra kase shikale?",
+        "Shivajinche prashikshhana kase jhale?",
+        "How did Shivaji master warfare?",
+        "शिवाजी महाराजांनी युद्धकौशल्य कसे अत्मसत केले",
+        "त्यांनी युद्धतन्त्र कसे शिकले",
+        "शिवाजींचे प्रशिक्षन कसे झाले",
+        "शिवाजी मस्तेर वर्फरे"
+      ],
+      "answer": {
+        "mr": "सराव, निरीक्षण आणि अनुभवी सरदारांच्या मार्गदर्शनातून त्यांनी युद्धकौशल्य आत्मसात केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanna prajechi kalaji kashi ghyavi he ka shikavale gele?",
+      "variants": [
+        "Rajane prajechi seva ka karavi?",
+        "Prajesathi shikshhana ka avashyaka?",
+        "Why was care for subjects taught?",
+        "शिवाजी महाराजांना प्रजेचि कलजि कशी घ्यवि हे का शिकवले गेले",
+        "रजने प्रजेचि सेव का करवि",
+        "प्रजेसथि शिक्षण का आवश्यक",
+        "करे सुब्जेक्त्स तौघ्त"
+      ],
+      "answer": {
+        "mr": "राज्य प्रजेवर आधारित असते, म्हणून प्रजेची काळजी घेणे आवश्यक आहे."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni ganimi kavyacha vapara ka kela?",
+      "variants": [
+        "Ganimi kava ka mahattvacha hota?",
+        "Tyanni hi paddhata ka nivadali?",
+        "Why did Shivaji use guerrilla tactics?",
+        "शिवाजी महाराजांनी गनिमि कव्यच वपर का केला",
+        "गनिमि कव का महत्त्वच होता",
+        "त्यांनी ही पद्धत का निवदलि",
+        "शिवाजी उसे गुएर्रिल्ल तक्तिक्स"
+      ],
+      "answer": {
+        "mr": "मोठ्या सैन्याविरुद्ध लढण्यासाठी गनिमी कावा प्रभावी ठरतो म्हणून त्यांनी तो वापरला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanata svabhimanache mahattva kaya hote?",
+      "variants": [
+        "Svabhimana ka shikavala gela?",
+        "Svabhimanacha rajakarabharata upayoga kaya?",
+        "Why was self-respect important?",
+        "शिवाजी महाराजांच्या शिक्षनत स्वभिमनचे महत्त्व काय होते",
+        "स्वभिमन का शिकवल गेला",
+        "स्वभिमनच रजकरभरत उपयोग काय",
+        "सेल्फ-रेस्पेक्त महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "स्वाभिमानामुळे अन्याय सहन न करता स्वराज्याची स्थापना करता येते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanna arthika vyavasthapana ka shikavale gele?",
+      "variants": [
+        "Arthika jnanache mahattva kaya?",
+        "Rajasathi arthavyavastha ka mahattvachi?",
+        "Why did Shivaji learn financial management?",
+        "शिवाजी महाराजांना अर्थिक व्यवस्थपन का शिकवले गेले",
+        "अर्थिक ज्ननचे महत्त्व काय",
+        "रजसथि अर्थव्यवस्थ का महत्त्वचि",
+        "शिवाजी शिका फिनन्किअल मनगेमेन्त"
+      ],
+      "answer": {
+        "mr": "राज्य चालवण्यासाठी योग्य महसूल आणि खर्च व्यवस्थापन आवश्यक असते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni sainyachi sanghatana kashi shikali?",
+      "variants": [
+        "Sainya vyavasthapanache shikshhana kase jhale?",
+        "Seneche niyojana ka avashyaka?",
+        "How did Shivaji learn army organization?",
+        "शिवाजी महाराजांनी सैन्यचि सन्घतन कशी शिकलि",
+        "सैन्य व्यवस्थपनचे शिक्षण कसे झाले",
+        "सेनेचे नियोजन का आवश्यक",
+        "शिवाजी शिका अर्म्य ओर्गनिझतिओन"
+      ],
+      "answer": {
+        "mr": "अनुभवी सरदारांच्या मार्गदर्शनाखाली त्यांनी सैन्य संघटनेचे तत्त्व शिकले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanamule tyanchyata konate netrritvaguna vikasita jhale?",
+      "variants": [
+        "Shikshhanamule tyanchyata kaya badala jhala?",
+        "Netrritvaguna kase vikasita jhale?",
+        "What leadership traits developed through education?",
+        "शिवाजी महाराजांच्या शिक्षनमुले त्यन्च्यत कोणते नेत्र्रित्वगुन विकसित झाले",
+        "शिक्षनमुले त्यन्च्यत काय बदल झाला",
+        "नेत्र्रित्वगुन कसे विकसित झाले",
+        "लेअदेर्शिप त्रैत्स देवेलोपेद थ्रोउघ एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "त्यांच्यात धैर्य, दूरदृष्टी, संयम आणि लोकांवर विश्वास ठेवण्याची क्षमता विकसित झाली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni dharmasahishhnuta ka shikali?",
+      "variants": [
+        "Dharmasahishhnuteche mahattva kaya?",
+        "Tyanni sarva dharmancha adara ka kela?",
+        "Why did Shivaji learn religious tolerance?",
+        "शिवाजी महाराजांनी धर्मसहिष्नुत का शिकलि",
+        "धर्मसहिष्नुतेचे महत्त्व काय",
+        "त्यांनी सर्व धर्मन्च अदर का केला",
+        "शिवाजी शिका रेलिगिओउस तोलेरन्के"
+      ],
+      "answer": {
+        "mr": "सर्व धर्मांचा आदर केल्यामुळे राज्यात शांतता आणि एकता राहते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanchya shikshhanatuna ajachya vidyarthyanni kaya shikave?",
+      "variants": [
+        "Apana tyanchyakaduna kaya prerana ghyavi?",
+        "Ajachya kalata shikshhanache mahattva kaya?",
+        "What can students learn from Shivaji’s education?",
+        "शिवाजी महाराजांच्या शिक्षनतुन अजच्य विद्यर्थ्यणि काय शिकवे",
+        "अपन त्यन्च्यकदुन काय प्रेरणा घ्यवि",
+        "अजच्य कळतात शिक्षनचे महत्त्व काय",
+        "कन स्तुदेन्त्स शिका फ्रोम शिवाजी’स एदुकतिओन"
+      ],
+      "answer": {
+        "mr": "आपण त्यांच्या शिक्षणातून शिस्त, परिश्रम, नैतिकता आणि धैर्य शिकावे."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni shikshhanata vyavaharajnana ka mahattvache manale?",
+      "variants": [
+        "Vyavaharajnana mhanaje kaya?",
+        "Rajasathi vyavaharajnana ka avashyaka?",
+        "Why was practical knowledge important?",
+        "शिवाजी महाराजांनी शिक्षनत व्यवहरज्नन का महत्त्वचे मनले",
+        "व्यवहरज्नन म्हणजे काय",
+        "रजसथि व्यवहरज्नन का आवश्यक",
+        "प्रक्तिकल क्नोव्लेद्गे महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "व्यवहारज्ञानामुळे प्रत्यक्ष परिस्थितीत योग्य निर्णय घेता येतात."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni veleche mahattva kase shikale?",
+      "variants": [
+        "Vela vyavasthapana ka avashyaka hote?",
+        "Velecha upayoga kasa karava he tyanni kase shikale?",
+        "How did Shivaji learn time management?",
+        "शिवाजी महाराजांनी वेलेचे महत्त्व कसे शिकले",
+        "वेल व्यवस्थपन का आवश्यक होते",
+        "वेलेच उपयोग कसा करव हे त्यांनी कसे शिकले",
+        "शिवाजी शिका तिमे मनगेमेन्त"
+      ],
+      "answer": {
+        "mr": "योग्य वेळी योग्य कृती केल्यास विजय मिळतो हे त्यांनी अनुभवातून शिकले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Svarajya mhanaje kaya?",
+      "variants": [
+        "Svarajyachi vyakhya kaya ahe?",
+        "Svarajya mhanaje kase rajya?",
+        "What does Swarajya mean?",
+        "स्वराज्य म्हणजे काय",
+        "स्वराज्याची व्यख्य काय आहे",
+        "स्वराज्य म्हणजे कसे राज्य",
+        "स्वराज्य मेअन"
+      ],
+      "answer": {
+        "mr": "स्वराज्य म्हणजे आपल्या लोकांचे, आपल्या हितासाठी चालणारे स्वतंत्र आणि न्याय्य राज्य."
+      },
+      "category": "concept"
+    },
+    {
+      "question": "Shivaji maharajanni svarajyachi sthapana ka keli?",
+      "variants": [
+        "Svarajyachi garaja ka hoti?",
+        "Shivajinna svatantra rajya ka have hote?",
+        "Why did Shivaji establish Swarajya?",
+        "शिवाजी महाराजांनी स्वराज्याची स्थापना का केली",
+        "स्वराज्याची गरज का होती",
+        "शिवाजींना स्वतन्त्र राज्य का होते",
+        "शिवाजी एस्तब्लिश स्वराज्य"
+      ],
+      "answer": {
+        "mr": "कारण लोकांवर अन्याय होत होता आणि त्यांना सुरक्षित, न्याय्य राज्य हवे होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapanechi suruvata kuthuna jhali?",
+      "variants": [
+        "Pahila killa konata jinkala?",
+        "Svarajyachi pahili payari kaya hoti?",
+        "Where did the establishment of Swarajya begin?",
+        "स्वराज्य स्थपनेचि सुरुवत कुथुन झाली",
+        "पहिला किल्ला कोणता जिन्कल",
+        "स्वराज्याची पहिली पयरि काय होती",
+        "एस्तब्लिश्मेन्त स्वराज्य बेगिन"
+      ],
+      "answer": {
+        "mr": "स्वराज्य स्थापनेची सुरुवात तोरणा किल्ला जिंकून झाली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Torana killa ka mahattvacha hota?",
+      "variants": [
+        "Toranyache mahattva kaya?",
+        "Torana jinkane ka avashyaka hote?",
+        "Why was Torna fort important?",
+        "तोरन किल्ला का महत्त्वच होता",
+        "तोरन्यचे महत्त्व काय",
+        "तोरन जिन्कने का आवश्यक होते",
+        "तोर्न फोर्त महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "तोरणा हा मजबूत आणि रणनीतिदृष्ट्या महत्त्वाचा किल्ला होता."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni svarajya sthapanesathi konachi madata ghetali?",
+      "variants": [
+        "Shivajinna konachi satha milali?",
+        "Mavalyanchi bhumika kaya hoti?",
+        "Who helped Shivaji establish Swarajya?",
+        "शिवाजी महाराजांनी स्वराज्य स्थपनेसथि कोनचि मदत घेतलि",
+        "शिवाजींना कोनचि सथ मिललि",
+        "मवल्यन्चि भूमिका काय होती",
+        "हेल्पेद शिवाजी एस्तब्लिश स्वराज्य"
+      ],
+      "answer": {
+        "mr": "शिवाजी महाराजांना मावळ्यांची आणि विश्वासू सरदारांची साथ मिळाली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapaneta mavalyanchi bhumika kaya hoti?",
+      "variants": [
+        "Mavale kona hote?",
+        "Tyanni kaya yogadana dile?",
+        "What was the role of Mavalas?",
+        "स्वराज्य स्थापनेत मवल्यन्चि भूमिका काय होती",
+        "मवले कोण होते",
+        "त्यांनी काय योगदन दिले",
+        "रोले मवलस"
+      ],
+      "answer": {
+        "mr": "मावळे शूर आणि निष्ठावान होते. त्यांनी किल्ले जिंकण्यात मोठी मदत केली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni kille jinkanyavara bhara ka dila?",
+      "variants": [
+        "Killyanche mahattva kaya hote?",
+        "Svarajyasathi kille ka avashyaka hote?",
+        "Why did Shivaji focus on forts?",
+        "शिवाजी महाराजांनी किल्ले जिन्कन्यवर भर का दिला",
+        "किल्ल्यन्चे महत्त्व काय होते",
+        "स्वरज्यसथि किल्ले का आवश्यक होते",
+        "शिवाजी फोकुस फोर्त्स"
+      ],
+      "answer": {
+        "mr": "किल्ले हे संरक्षण आणि प्रशासनाचे केंद्र होते, म्हणून ते महत्त्वाचे होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapaneta ganimi kavyacha upayoga kasa jhala?",
+      "variants": [
+        "Ganimi kava ka vaparala?",
+        "Ladhaichi paddhata kashi hoti?",
+        "How was guerrilla warfare used?",
+        "स्वराज्य स्थापनेत गनिमि कव्यच उपयोग कसा झाला",
+        "गनिमि कव का वपरल",
+        "लधैचि पद्धत कशी होती",
+        "गुएर्रिल्ल वर्फरे उसेद"
+      ],
+      "answer": {
+        "mr": "गनिमी काव्यामुळे कमी सैन्य असूनही मोठ्या शत्रूवर विजय मिळवता आला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni svarajyasathi konati shapatha ghetali?",
+      "variants": [
+        "Svarajyacha sankalpa kadhi ghetala?",
+        "Shivajinchi pratijna kaya hoti?",
+        "What vow did Shivaji take?",
+        "शिवाजी महाराजांनी स्वरज्यसथि कोणती शपथ घेतलि",
+        "स्वराज्याचा सन्कल्प कधी घेतल",
+        "शिवजिन्चि प्रतिज्न काय होती",
+        "वोव शिवाजी तके"
+      ],
+      "answer": {
+        "mr": "त्यांनी अन्यायमुक्त आणि स्वतंत्र स्वराज्य उभारण्याची शपथ घेतली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapaneta lokancha sahabhaga ka mahattvacha hota?",
+      "variants": [
+        "Lokanchi satha ka avashyaka hoti?",
+        "Prajela kase jodale gele?",
+        "Why was public support important?",
+        "स्वराज्य स्थापनेत लोकांचा सहभग का महत्त्वच होता",
+        "लोकन्चि सथ का आवश्यक होती",
+        "प्रजेल कसे जोदले गेले",
+        "पुब्लिक सुप्पोर्त महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "लोकांच्या पाठिंब्यामुळे स्वराज्य मजबूत आणि स्थिर झाले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapanemule lokanmadhye kaya bhavana nirmana jhali?",
+      "variants": [
+        "Lokanna kaya vatale?",
+        "Svarajyamule atmavishvasa vadhala ka?",
+        "What feeling did Swarajya create?",
+        "स्वराज्य स्थपनेमुले लोकांमध्ये काय भवन निर्माण झाली",
+        "लोकांना काय वतले",
+        "स्वरज्यमुले आत्मविश्वास वधल का",
+        "फीलिन्ग स्वराज्य क्रेअते"
+      ],
+      "answer": {
+        "mr": "लोकांमध्ये स्वाभिमान आणि आत्मविश्वासाची भावना निर्माण झाली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni svarajyachi kalpana kuthuna ghetali?",
+      "variants": [
+        "Svarajyachi prerana koni dili?",
+        "Jijabaincha prabhava hota ka?",
+        "Where did Shivaji get the idea of Swarajya?",
+        "शिवाजी महाराजांनी स्वराज्याची कल्पन कुथुन घेतलि",
+        "स्वराज्याची प्रेरणा कोणी दिली",
+        "जिजबैन्च प्रभाव होता का",
+        "शिवाजी गेत इदेअ स्वराज्य"
+      ],
+      "answer": {
+        "mr": "जिजाबाईंच्या संस्कारांमधून आणि अन्यायाच्या अनुभवातून त्यांना ही कल्पना सुचली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni konata dusara mahattvacha killa jinkala?",
+      "variants": [
+        "Toranyanantara konata killa jinkala?",
+        "Rajagada kadhi jinkala?",
+        "Which important fort was captured after Torna?",
+        "शिवाजी महाराजांनी कोणता दुसर महत्त्वच किल्ला जिन्कल",
+        "तोरन्यनन्तर कोणता किल्ला जिन्कल",
+        "रजगद कधी जिन्कल",
+        "महत्त्वाचे फोर्त कप्तुरेद अफ्तेर तोर्न"
+      ],
+      "answer": {
+        "mr": "तोरण्यानंतर शिवाजी महाराजांनी राजगड किल्ला जिंकला आणि तो स्वराज्याची राजधानी बनवला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Rajagada killyache mahattva kaya hote?",
+      "variants": [
+        "Rajagada ka nivadala gela?",
+        "Rajagadachi bhumika kaya hoti?",
+        "Why was Rajgad important?",
+        "रजगद किल्ल्यचे महत्त्व काय होते",
+        "रजगद का निवदल गेला",
+        "रजगदचि भूमिका काय होती",
+        "रज्गद महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "राजगड हा डोंगराळ आणि सुरक्षित किल्ला होता, त्यामुळे तो राजधानीसाठी योग्य ठरला."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni kille jinkanyasathi konati paddhata vaparali?",
+      "variants": [
+        "Kille kase jinkale jata hote?",
+        "Ganimi kava kasa vaparala gela?",
+        "How were forts captured?",
+        "शिवाजी महाराजांनी किल्ले जिन्कन्यसथि कोणती पद्धत वपरलि",
+        "किल्ले कसे जिन्कले जातात होते",
+        "गनिमि कव कसा वपरल गेला",
+        "फोर्त्स कप्तुरेद"
+      ],
+      "answer": {
+        "mr": "ते गनिमी काव्याचा वापर करून अचानक हल्ले करत आणि किल्ले ताब्यात घेत."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapaneta vishvasu saradaranchi bhumika kaya hoti?",
+      "variants": [
+        "Saradaranni kaya madata keli?",
+        "Shivajinchya sathidaranche yogadana kaya?",
+        "What was the role of loyal sardars?",
+        "स्वराज्य स्थापनेत विश्वसु सरदरन्चि भूमिका काय होती",
+        "सरदरणि काय मदत केली",
+        "शिवाजींच्या सथिदरन्चे योगदन काय",
+        "रोले लोयल सर्दर्स"
+      ],
+      "answer": {
+        "mr": "विश्वासू सरदारांनी युद्धात मदत केली आणि स्वराज्याचा विस्तार करण्यात योगदान दिले."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni lokancha vishvasa kasa jinkala?",
+      "variants": [
+        "Lokanni tyanna satha ka dili?",
+        "Tyanni prajecha vishvasa kasa milavala?",
+        "How did Shivaji win people’s trust?",
+        "शिवाजी महाराजांनी लोकांचा विश्वस कसा जिन्कल",
+        "लोकणि त्यांना सथ का दिली",
+        "त्यांनी प्रजेच विश्वस कसा मिलवल",
+        "शिवाजी विन पेओप्ले’स त्रुस्त"
+      ],
+      "answer": {
+        "mr": "त्यांनी न्याय दिला, संरक्षण केले आणि प्रजेला सन्मानाने वागवले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Svarajya sthapanechya veli konakonatya adachani alya?",
+      "variants": [
+        "Shivajinna konate sankata ale?",
+        "Svarajya ubharatana konati avhane hoti?",
+        "What challenges arose while establishing Swarajya?",
+        "स्वराज्य स्थपनेच्य वेलि कोनकोनत्य अदचनि अल्य",
+        "शिवाजींना कोणते सन्कत अले",
+        "स्वराज्य उभरतन कोणती अव्हने होती",
+        "चल्लेन्गेस अरोसे व्हिले एस्तब्लिशिन्ग स्वराज्य"
+      ],
+      "answer": {
+        "mr": "मोठ्या सुलतानांची सत्ता, कमी सैन्य आणि आर्थिक अडचणी ही मोठी आव्हाने होती."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni sainyachi sanghatana kashi keli?",
+      "variants": [
+        "Sainya kase ubhe kele?",
+        "Senechi rachana kashi hoti?",
+        "How did Shivaji organize his army?",
+        "शिवाजी महाराजांनी सैन्यचि सन्घतन कशी केली",
+        "सैन्य कसे उभे केले",
+        "सेनेचि रचन कशी होती",
+        "शिवाजी ओर्गनिझे हिस अर्म्य"
+      ],
+      "answer": {
+        "mr": "त्यांनी मावळ्यांना संघटित करून शिस्तबद्ध आणि वेगवान सैन्य तयार केले."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapanemule konatya sattanna dhakka basala?",
+      "variants": [
+        "Konala svarajyachi bhiti vatata hoti?",
+        "Sulatanancha pratisada kaya hota?",
+        "Which rulers were threatened by Swarajya?",
+        "स्वराज्य स्थपनेमुले कोणत्या सत्तण धक्क बसल",
+        "कोनल स्वराज्याची भिति वतत होती",
+        "सुलतनन्च प्रतिसद काय होता",
+        "रुलेर्स थ्रेअतेनेद ब्य स्वराज्य"
+      ],
+      "answer": {
+        "mr": "आदिलशहा आणि इतर सत्ताधाऱ्यांना स्वराज्यामुळे धक्का बसला."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Shivaji maharajanni svarajya vadhavanyasathi konati dhorane vaparali?",
+      "variants": [
+        "Tyanchi rananiti kaya hoti?",
+        "Svarajyacha vistara kasa jhala?",
+        "What policies did Shivaji use to expand Swarajya?",
+        "शिवाजी महाराजांनी स्वराज्य वधवन्यसथि कोणती धोरने वपरलि",
+        "त्यांची रननिति काय होती",
+        "स्वराज्याचा विस्तर कसा झाला",
+        "पोलिकिएस शिवाजी उसे एक्स्पन्द स्वराज्य"
+      ],
+      "answer": {
+        "mr": "त्यांनी किल्ले जिंकणे, सैन्य मजबूत करणे आणि लोकांचा पाठिंबा मिळवणे ही धोरणे वापरली."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapanecha pahila motha parinama kaya hota?",
+      "variants": [
+        "Pahila yashasvi tappa konata?",
+        "Svarajyacha praranbhika parinama kaya?",
+        "What was the first major outcome?",
+        "स्वराज्य स्थपनेच पहिला मोठा परिनम काय होता",
+        "पहिला यशस्वि तप्प कोणता",
+        "स्वराज्याचा प्ररन्भिक परिनम काय",
+        "फिर्स्त मजोर ओउत्कोमे"
+      ],
+      "answer": {
+        "mr": "काही महत्त्वाचे किल्ले ताब्यात येऊन स्वराज्याची पायाभरणी झाली."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Shivaji maharajanni shatrunna kase gondhalata takale?",
+      "variants": [
+        "Tyanni konati yuddhaniti vaparali?",
+        "Shatruncha parabhava kasa kela?",
+        "How did Shivaji confuse enemies?",
+        "शिवाजी महाराजांनी शत्रूंना कसे गोन्धलत तकले",
+        "त्यांनी कोणती युद्धनिति वपरलि",
+        "शत्रुन्च परभव कसा केला",
+        "शिवाजी कोन्फुसे एनेमिएस"
+      ],
+      "answer": {
+        "mr": "ते अचानक हल्ले करून आणि वेगवान हालचालींनी शत्रूंना गोंधळात टाकत."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapaneta atmavishvasache mahattva kaya hote?",
+      "variants": [
+        "Atmavishvasa ka avashyaka hota?",
+        "Shivajinna atmavishvasa kasa milala?",
+        "Why was confidence important?",
+        "स्वराज्य स्थापनेत अत्मविश्वसचे महत्त्व काय होते",
+        "आत्मविश्वास का आवश्यक होता",
+        "शिवाजींना आत्मविश्वास कसा मिलल",
+        "कोन्फिदेन्के महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "आत्मविश्वासामुळे कमी साधनसामग्री असूनही मोठे कार्य साध्य करता आले."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni jinkalelya killyanche vyavasthapana kase kele?",
+      "variants": [
+        "Kille jinkalyanantara kaya kele jata hote?",
+        "Killyanchi jababadari konakade dili jata hoti?",
+        "How were captured forts managed?",
+        "शिवाजी महाराजांनी जिन्कलेल्य किल्ल्यन्चे व्यवस्थपन कसे केले",
+        "किल्ले जिन्कल्यनन्तर काय केले जातात होते",
+        "किल्ल्यन्चि जबबदरि कोनकदे दिली जातात होती",
+        "कप्तुरेद फोर्त्स मनगेद"
+      ],
+      "answer": {
+        "mr": "किल्ल्यांवर विश्वासू अधिकारी नेमून अन्नसाठा, सैन्य आणि सुरक्षा यांची योग्य व्यवस्था केली जात होती."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapaneta arthika adachani kasha sodavalya?",
+      "variants": [
+        "Svarajyasathi paisa kasa ubharala?",
+        "Arthika samasya kasha hatalalya?",
+        "How were financial problems solved?",
+        "स्वराज्य स्थापनेत अर्थिक अदचनि कश सोदवल्य",
+        "स्वरज्यसथि पैस कसा उभरल",
+        "अर्थिक समस्य कश हतलल्य",
+        "फिनन्किअल प्रोब्लेम्स सोल्वेद"
+      ],
+      "answer": {
+        "mr": "योग्य महसूलव्यवस्था आणि किल्ल्यांतील साठ्यामुळे आर्थिक अडचणी कमी करण्यात आल्या."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni lokanmadhye ekata kashi nirmana keli?",
+      "variants": [
+        "Lokanna ekatra kase anale?",
+        "Svarajyasathi ekata ka mahattvachi hoti?",
+        "How did Shivaji build unity?",
+        "शिवाजी महाराजांनी लोकांमध्ये एकत कशी निर्माण केली",
+        "लोकांना एकत्र कसे अनले",
+        "स्वरज्यसथि एकत का महत्त्वचि होती",
+        "शिवाजी बुइल्द उनित्य"
+      ],
+      "answer": {
+        "mr": "समान वागणूक आणि न्याय देऊन त्यांनी लोकांमध्ये एकता निर्माण केली."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Svarajya sthapaneta dhairyache mahattva kaya hote?",
+      "variants": [
+        "Dhairya ka avashyaka hote?",
+        "Dhadasamule kaya sadhya jhale?",
+        "Why was courage important?",
+        "स्वराज्य स्थापनेत धैर्यचे महत्त्व काय होते",
+        "धैर्य का आवश्यक होते",
+        "धदसमुले काय सध्य झाले",
+        "कोउरगे महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "मोठ्या सत्तांशी सामना करण्यासाठी अपार धैर्य आवश्यक होते."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni svarajyachi sima kashi vadhavali?",
+      "variants": [
+        "Svarajyacha vistara kasa jhala?",
+        "Navina kille kase milavale?",
+        "How did Swarajya expand?",
+        "शिवाजी महाराजांनी स्वराज्याची सिम कशी वधवलि",
+        "स्वराज्याचा विस्तर कसा झाला",
+        "नविन किल्ले कसे मिलवले",
+        "स्वराज्य एक्स्पन्द"
+      ],
+      "answer": {
+        "mr": "किल्ले जिंकून आणि शत्रूंचा पराभव करून स्वराज्याची सीमा वाढवली गेली."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapaneta sanyama ka avashyaka hota?",
+      "variants": [
+        "Sanyamache mahattva kaya?",
+        "Ghai na karata yojana ka akhalya?",
+        "Why was patience necessary?",
+        "स्वराज्य स्थापनेत सन्यम का आवश्यक होता",
+        "सन्यमचे महत्त्व काय",
+        "घै न करता योजन का अखल्य",
+        "पतिएन्के नेकेस्सर्य"
+      ],
+      "answer": {
+        "mr": "योग्य संधीची वाट पाहून हल्ला केल्यास विजय निश्चित होत असे."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Shivaji maharajanni shatrunchya vishvasala kasa dhakka dila?",
+      "variants": [
+        "Shatrunna ashcharya kase vatale?",
+        "Achanaka halle ka prabhavi tharale?",
+        "How did Shivaji surprise enemies?",
+        "शिवाजी महाराजांनी शत्रुन्च्य विश्वसल कसा धक्क दिला",
+        "शत्रूंना अश्चर्य कसे वतले",
+        "अचनक हल्ले का प्रभवि थरले",
+        "शिवाजी सुर्प्रिसे एनेमिएस"
+      ],
+      "answer": {
+        "mr": "अचानक हल्ले आणि वेगवान हालचालींमुळे शत्रू गोंधळून जात."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapaneta lokancha sahabhaga kasa vadhala?",
+      "variants": [
+        "Loka svarajyata kase sahabhagi jhale?",
+        "Prajela kase jodale gele?",
+        "How did people participate in Swarajya?",
+        "स्वराज्य स्थापनेत लोकांचा सहभग कसा वधल",
+        "लोक स्वरज्यत कसे सहभगि झाले",
+        "प्रजेल कसे जोदले गेले",
+        "पेओप्ले पर्तिकिपते स्वराज्य"
+      ],
+      "answer": {
+        "mr": "लोकांनी स्वराज्याला आपले मानून सैन्यात आणि प्रशासनात सहभाग घेतला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Svarajyachi sthapana hi aitihasika ghatana ka manali jate?",
+      "variants": [
+        "Svarajyache mahattva kaya?",
+        "Hi ghatana visheshha ka ahe?",
+        "Why is the establishment of Swarajya historic?",
+        "स्वराज्याची स्थापना ही ऐतिहसिक घतन का मनलि जते",
+        "स्वरज्यचे महत्त्व काय",
+        "ही घतन विशेष का आहे",
+        "एस्तब्लिश्मेन्त स्वराज्य हिस्तोरिक"
+      ],
+      "answer": {
+        "mr": "कारण यामुळे महाराष्ट्रात प्रथमच स्वतंत्र आणि लोकहिताचे राज्य निर्माण झाले."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Svarajya sthapaneta netrritvagunanche mahattva kaya hote?",
+      "variants": [
+        "Netrritva ka avashyaka hote?",
+        "Shivaji maharajanche netrritva kase hote?",
+        "Why were leadership qualities important?",
+        "स्वराज्य स्थापनेत नेत्र्रित्वगुनन्चे महत्त्व काय होते",
+        "नेत्र्रित्व का आवश्यक होते",
+        "शिवाजी महाराजांचे नेत्र्रित्व कसे होते",
+        "लेअदेर्शिप कुअलितिएस महत्त्वाचे"
+      ],
+      "answer": {
+        "mr": "नेतृत्वामुळे लोक एकत्र आले आणि स्वराज्याचा पाया मजबूत झाला."
+      },
+      "category": "values"
+    },
+    {
+      "question": "Shivaji maharajanni killyanna konate sthana dile?",
+      "variants": [
+        "Kille ka mahattvache hote?",
+        "Svarajyata killyanchi bhumika kaya?",
+        "What was the importance of forts?",
+        "शिवाजी महाराजांनी किल्ल्यांना कोणते स्थन दिले",
+        "किल्ले का महत्त्वचे होते",
+        "स्वरज्यत किल्ल्यन्चि भूमिका काय",
+        "इम्पोर्तन्के फोर्त्स"
+      ],
+      "answer": {
+        "mr": "किल्ले हे स्वराज्याचे आधारस्तंभ होते आणि संरक्षणाचे मुख्य केंद्र होते."
+      },
+      "category": "history"
+    },
+    {
+      "question": "Svarajya sthapanemule prajechya jivanata kaya badala jhala?",
+      "variants": [
+        "Lokanche jivana kase sudharale?",
+        "Svarajyamule kaya phayada jhala?",
+        "How did people’s lives change?",
+        "स्वराज्य स्थपनेमुले प्रजेच्य जिवनत काय बदल झाला",
+        "लोकांचे जिवन कसे सुधरले",
+        "स्वरज्यमुले काय फयद झाला",
+        "पेओप्ले’स लिवेस चन्गे"
+      ],
+      "answer": {
+        "mr": "प्रजेला न्याय, सुरक्षितता आणि सन्मान मिळू लागला."
+      },
+      "category": "impact"
+    },
+    {
+      "question": "Svarajya sthapaneta shivaji maharajanche sarvata mothe balasthana kaya hote?",
+      "variants": [
+        "Tyanchi mukhya takada kaya hoti?",
+        "Tyanni kashamule yasha milavale?",
+        "What was Shivaji’s biggest strength?",
+        "स्वराज्य स्थापनेत शिवाजी महाराजांचे सर्वत मोठे बलस्थन काय होते",
+        "त्यांची मुख्य तकद काय होती",
+        "त्यांनी कशमुले यश मिलवले",
+        "शिवाजी’स बिग्गेस्त स्त्रेन्ग्थ"
+      ],
+      "answer": {
+        "mr": "त्यांची दूरदृष्टी, धैर्य आणि लोकांचा विश्वास हे त्यांचे मोठे बलस्थान होते."
+      },
+      "category": "analysis"
+    },
+    {
+      "question": "Dadoji konddev kon hote?",
+      "variants": [
+        "दादोजी कोंडदेव कोण होते",
+        "Who was Dadoji Konddev?",
+        "Dadoji konddev mhanaje kona?",
+        "Dadojichi olakh kaya hoti?",
+        "Kon hota dadoji konddev?",
+        "दादोजी कोंडदेव कशासाठी प्रसिद्ध आहेत",
+        "Dadoji kashasathi prasiddha ahe?",
+        "Shivaji maharajanna kon shikavale?"
+      ],
+      "answer": {
+        "mr": "दादोजी कोंडदेव हे शिवाजी महाराजांचे शिक्षक आणि पुण्याचे कारभारी होते. त्यांनी शिवाजी महाराजांना शिस्त, प्रशासन आणि युद्धकौशल्य शिकवले."
+      },
+      "category": "history"
+    }
+  ]
+}

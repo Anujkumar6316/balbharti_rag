@@ -1,0 +1,39 @@
+# =============================================================
+# Balbharati Marathi Voice-Agent RAG — Python dependencies
+# =============================================================
+# Target: Raspberry Pi 5 (8GB), Python 3.11+ (Pi OS Bookworm ships 3.11).
+# Install: pip install -r requirements.txt
+# Total download size: ~150MB (PyTorch CPU + sentence-transformers + small deps)
+# =============================================================
+
+# --- Web server ---
+fastapi==0.115.6
+uvicorn==0.34.0
+pydantic==2.10.4
+
+# --- HTTP client (for llama-server) ---
+requests==2.32.3
+
+# --- YAML config ---
+PyYAML==6.0.2
+
+# --- Embeddings + tokenizer ---
+# Note: sentence-transformers pulls in torch + transformers + huggingface-hub.
+# On Raspberry Pi 5, install the CPU-only torch wheel:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers==3.3.1
+# Pin torch separately so the CPU wheel is used
+# (Uncomment on Pi:)
+# torch==2.5.1+cpu
+# transformers==4.47.1
+
+# --- Numeric ---
+numpy==2.2.1
+
+# --- (Optional) FAISS — only needed if KB grows past ~10k QA pairs.
+# For 199 docs, numpy brute-force is faster.
+# faiss-cpu==1.9.0.post1
+
+# --- (Optional) Eval / dev tools ---
+# pytest==8.3.4
+indic-transliteration
