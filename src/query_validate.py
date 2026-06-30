@@ -21,6 +21,26 @@ logger = __import__("logging").getLogger(__name__)
 _TOKEN_SPLIT_RE = re.compile(r"[\s,।;:!?'\"\.\(\)\[\]\{\}<>\/\\|@#$%\^&\*\-=\+~`_…\u0964\u0965]+")
 
 
+def _exists_in_vocab(word: str, vocab: set) -> bool:
+    """Check if word exists in vocab via exact, prefix, or edit-distance-1 match.
+
+    Handles spoken truncations ("Swaraj" → "Swarajya") and minor spelling
+    drift without needing the word to be in the vocab verbatim.
+    """
+    if word in vocab:
+        return True
+    for vw in vocab:
+        # Prefix match: query word is prefix of a KB word (spoken truncation)
+        if vw.startswith(word) or word.startswith(vw):
+            return True
+        # Edit-distance-1 match: same tolerance as fuzzy_correct upstream
+        if abs(len(word) - len(vw)) <= 1:
+            diffs = sum(1 for a, b in zip(word, vw) if a != b)
+            if diffs <= 1:
+                return True
+    return False
+
+
 # ─────────────────────────────────────────────────────────────────
 # Stage 1: Structural validation (pre-retrieval)
 # ─────────────────────────────────────────────────────────────────
@@ -78,13 +98,15 @@ def validate_structure(text: str, cfg: dict, kb_vocab: set = None) -> Tuple[bool
     # (not aksara-level tokens) so vocab is directly comparable.
     # Catches anachronisms ("aircraft", "rocket") and out-of-domain terms
     # without any hardcoded word lists — the KB itself defines what's valid.
+    # Handles spoken truncations ("Swaraj" → matches "Swarajya") via prefix
+    # matching and edit-distance-1, same tolerance as fuzzy_correct upstream.
     if kb_vocab is not None:
-        max_missing = struct_cfg.get("max_missing_token_ratio", 0.4)
+        max_missing = struct_cfg.get("max_missing_token_ratio", 0.5)
         # Match build_kb_vocab extraction: whole Devanagari/Latin words
         q_words = [t.lower() for t in re.findall(r"[\u0900-\u097FA-Za-z]+", text)
                    if len(t) >= 4]
         if q_words:
-            missing = sum(1 for t in q_words if t not in kb_vocab)
+            missing = sum(1 for t in q_words if not _exists_in_vocab(t, kb_vocab))
             missing_ratio = missing / len(q_words)
             if missing_ratio > max_missing:
                 return (False, f"vocab_mismatch ({missing}/{len(q_words)} words unknown to KB)")

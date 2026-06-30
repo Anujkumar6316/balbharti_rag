@@ -116,7 +116,7 @@ query_validation:
     min_length: 3                 # chars — reject "a", "ok"
     max_length: 200               # chars — reject essays pasted as queries
     max_token_repeat_ratio: 0.6   # reject "hello hello hello" (60%+ same token)
-    max_missing_token_ratio: 0.4  # reject if >40% query tokens absent from entire KB
+    max_missing_token_ratio: 0.5  # reject if >50% query words absent from KB (incl. prefix/fuzzy)
                                   # catches anachronisms ("aircraft") without hardcoded lists
 
   # Stage 2: Score-based checks (after retrieval, ~0ms — scores already computed)
