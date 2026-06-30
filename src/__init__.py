@@ -10,6 +10,7 @@ from .fusion import reciprocal_rank_fusion, FusionResult
 from .retrieve import HybridRetriever, RetrievalResult
 from .llm_client import LLMClient, LLMResponse, get_llm_client
 from .query_expand import expand_query
+from .query_intent import extract_intent, rerank_by_intent
 from .reranker import Reranker
 from .generate import generate_answer, GenerationResult
 from .pipeline import RAGPipeline, PipelineResult, LRUCache
@@ -25,6 +26,7 @@ __all__ = [
     "HybridRetriever", "RetrievalResult",
     "LLMClient", "LLMResponse", "get_llm_client",
     "expand_query", "Reranker",
+    "extract_intent", "rerank_by_intent",
     "generate_answer", "GenerationResult",
     "RAGPipeline", "PipelineResult", "LRUCache",
 ]

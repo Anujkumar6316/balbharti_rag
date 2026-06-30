@@ -68,14 +68,57 @@ _STT_FILLERS = {
 
 # Common Marathi stopwords (light list — we don't want to over-prune for FAQ matching)
 # Kept intentionally small: only articles, be-verbs, and obvious fillers.
+# IMPORTANT: Question words (का, काय, कसा, कधी, कोण, कुठे, किती) are NOT here —
+# they carry intent and must be preserved for BM25 matching.
 _MARATHI_STOPWORDS = {
     "आहे", "आहेत", "आहो", "आहात", "होता", "होती", "होते", "होत्या", "होतो",
-    "काय", "कसे", "कशी", "कसा", "कसला", "कसली", "कसले",
+    # काय, कसे, कशी, कसा REMOVED — these are intent words
     "हा", "ही", "हे", "तो", "ती", "ते", "त्या", "या",
     "आणि", "किंवा", "पण", "परंतु", "तर",
-    "म्हणजे", "म्हणून", "त्यामुळे",
+    # म्हणजे, म्हणून REMOVED — म्हणजे is a WHAT intent word
+    "त्यामुळे",
     "नाही", "नाहीत",
 }
+
+
+# ─────────────────────────────────────────────────────────────────
+# Light Marathi verb stemming (for BM25 morphological match)
+# ─────────────────────────────────────────────────────────────────
+
+# Common verb suffixes to strip so "sthapla" / "sthapana keli" / "sthapilya"
+# all reduce to "sthap*" + "kar*"/"kel*". Light = safe, no over-merging.
+_ROMAN_VERB_SUFFIXES = [
+    "lay", "la", "li", "le", "lya", "lyat", "tana", "tani", "tila",
+    "keli", "kela", "kartat", "karayche", "kara", "kar", "kayche",
+    "hoti", "hota", "hote", "hotya", "hovo", "have", "hava",
+]
+# Trim from the end if length ≥ 4 after trim (avoid eating short words)
+_ROMAN_MIN_STEM_LEN = 4
+
+
+def _stem_roman(word: str) -> str:
+    """Light stemming for Romanized Marathi verbs."""
+    if len(word) < _ROMAN_MIN_STEM_LEN + 2:
+        return word
+    w = word.lower()
+    for suffix in _ROMAN_VERB_SUFFIXES:
+        if w.endswith(suffix) and len(w) - len(suffix) >= _ROMAN_MIN_STEM_LEN:
+            return w[: -len(suffix)]
+    return w
+
+
+def light_stem(word: str) -> str:
+    """Apply light Marathi stemming to a token.
+
+    Currently only handles Roman (Latin) script — Devanagari verb conjugation
+    is more complex and we don't want to over-stem. Devanagari words pass through.
+    """
+    if not word:
+        return word
+    # Only stem Latin-script words
+    if "\u0900" <= word[0] <= "\u097F":
+        return word
+    return _stem_roman(word)
 
 
 def _split_devanagari_aksaras(text: str) -> List[str]:
@@ -173,6 +216,9 @@ def tokenize(text: str, drop_stopwords: bool = False) -> List[str]:
 
     if drop_stopwords:
         tokens = [t for t in tokens if t not in _MARATHI_STOPWORDS]
+
+    # Apply light Marathi stemming (Roman verbs only)
+    tokens = [light_stem(t) if not ("\u0900" <= t[0] <= "\u097F") else t for t in tokens if t]
 
     return tokens
 

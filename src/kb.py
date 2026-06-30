@@ -42,6 +42,7 @@ class KBArticle:
     # Precomputed for retrieval:
     doc_text: str           # canonical + variants joined
     variant_list: List[str] # for dense embedder (canonical + variants)
+    intent: str = "UNKNOWN" # WHY/WHAT/HOW/WHEN/WHO/WHERE/HOW_MUCH/YES_NO/UNKNOWN
 
 
 def load_kb(kb_path: str | Path) -> Tuple[List[KBArticle], dict]:
@@ -77,6 +78,16 @@ def load_kb(kb_path: str | Path) -> Tuple[List[KBArticle], dict]:
         # Doc text = canonical + all variants joined with newline
         doc_text = "\n".join(all_variants)
 
+        # Tag intent from the canonical question (and fall back to variants
+        # if the canonical question doesn't have a clear question word)
+        from .query_intent import extract_intent
+        intent = extract_intent(question)
+        if intent == "UNKNOWN":
+            for v in all_variants:
+                intent = extract_intent(v)
+                if intent != "UNKNOWN":
+                    break
+
         articles.append(
             KBArticle(
                 qa_id=f"qa_{i}",
@@ -86,6 +97,7 @@ def load_kb(kb_path: str | Path) -> Tuple[List[KBArticle], dict]:
                 category=category,
                 doc_text=doc_text,
                 variant_list=all_variants,
+                intent=intent,
             )
         )
 

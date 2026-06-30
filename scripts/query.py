@@ -26,49 +26,143 @@ from src.pipeline import RAGPipeline
 
 
 def print_result(result, verbose=False):
-    """Pretty-print a single pipeline result."""
+    """Pretty-print pipeline result. Verbose mode shows full debug trace."""
     print()
+    if not verbose:
+        # Simple output for non-verbose mode
+        print("─" * 70)
+        print(f"  Answer  : {result.answer_mr}")
+        print(
+            f"  Fallback: {result.is_fallback}"
+            + (f" ({result.fallback_reason})" if result.is_fallback else "")
+        )
+        print(f"  Tier    : {result.confidence_tier}   (score: {result.top_fused_score:.4f})")
+        print(f"  Ctx idx : {result.chosen_context_idx}   (qa_id: {result.chosen_qa_id or '-'})")
+        print(f"  Cached  : {result.cached}")
+        print(f"  Latency : {result.latency_s*1000:.0f} ms")
+        print("─" * 70)
+        return
+
+    # ═══════════════════════════════════════════════════════════════
+    # VERBOSE MODE — full debug trace
+    # ═══════════════════════════════════════════════════════════════
+    print("═" * 70)
+    print("  QUERY DEBUG")
+    print("═" * 70)
+
+    # ── Input processing ──
     print("─" * 70)
-    print(f"  Answer  : {result.answer_mr}")
-    print(
-        f"  Fallback: {result.is_fallback}"
-        + (f" ({result.fallback_reason})" if result.is_fallback else "")
-    )
-    print(f"  Tier    : {result.confidence_tier}   (top score: {result.top_fused_score:.4f})")
-    print(f"  Ctx idx : {result.chosen_context_idx}   (qa_id: {result.chosen_qa_id or '-'})")
-    print(f"  Cached  : {result.cached}")
-    print(f"  Latency : {result.latency_s*1000:.0f} ms total")
-    if verbose:
-        for stage, t in result.stage_latencies_s.items():
-            print(f"           {t*1000:>6.0f} ms  {stage}")
-        if result.retrieval:
-            print(f"  BM25 top: {result.retrieval.bm25_top_ids}")
-            print(f"  Dense top: {result.retrieval.dense_top_ids}")
-            if result.retrieval.weighted_scores and result.generation is None:
-                print(f"  Reranker scores:")
-                top_ws = sorted(
-                    result.retrieval.weighted_scores.items(),
-                    key=lambda x: x[1], reverse=True
-                )[:3]
-                for doc_id, score in top_ws:
-                    match = next(
-                        (c for c in result.retrieval.candidates if c.qa_id == doc_id),
-                        None,
-                    )
-                    if match:
-                        print(f"    {doc_id}  Q: {match.question}  (score: {score:.4f})")
-                        print(f"        A: {match.answer_mr}")
-            else:
-                print(f"  Context (RRF):")
-                for i, c in enumerate(result.retrieval.candidates, 1):
-                    rrf = result.retrieval.fused_scores[i - 1] if i <= len(result.retrieval.fused_scores) else 0
-                    print(f"    [{i}] {c.qa_id}  Q: {c.question}  (rrf: {rrf:.4f})")
-                    print(f"        A: {c.answer_mr}")
-        if result.generation and result.generation.raw_response:
-            print(f"  Raw LLM response:")
-            for line in result.generation.raw_response.text.split("\n"):
-                print(f"    | {line}")
+    print("  INPUT PROCESSING")
     print("─" * 70)
+    if result.normalization:
+        print(f"  Raw input       : {result.normalization.raw!r}")
+        print(f"  Normalized      : {result.normalization.cleaned!r}")
+        print(f"  Transformations : {', '.join(result.normalization.transformations) or 'none'}")
+        print(f"  Is garbage      : {result.normalization.is_garbage}"
+              + (f" ({result.normalization.reason})" if result.normalization.is_garbage else ""))
+    print(f"  Rule intent     : {result.query_intent}")
+
+    # ── Retrieval ──
+    if result.retrieval:
+        print()
+        print("─" * 70)
+        print("  RETRIEVAL")
+        print("─" * 70)
+        print(f"  Latency: {result.retrieval.latency_s*1000:.1f}ms")
+        print()
+
+        # BM25 top-5
+        print("  BM25 top-5:")
+        bm25_sorted = sorted(
+            result.retrieval.bm25_scores.items(),
+            key=lambda x: x[1], reverse=True
+        )[:5]
+        for i, (doc_id, score) in enumerate(bm25_sorted, 1):
+            art = _find_article(result, doc_id)
+            q_preview = art.question[:60] if art else "?"
+            print(f"    {i}. {doc_id:8s}  score={score:6.3f}  Q: {q_preview}")
+
+        print()
+        print("  Dense top-5:")
+        dense_sorted = sorted(
+            result.retrieval.dense_scores.items(),
+            key=lambda x: x[1], reverse=True
+        )[:5]
+        for i, (doc_id, score) in enumerate(dense_sorted, 1):
+            art = _find_article(result, doc_id)
+            q_preview = art.question[:60] if art else "?"
+            print(f"    {i}. {doc_id:8s}  score={score:6.3f}  Q: {q_preview}")
+
+        print()
+        print(f"  RRF fused top-5 (query_intent={result.retrieval.query_intent}):")
+        for i, (art, score) in enumerate(zip(result.retrieval.candidates[:5],
+                                              result.retrieval.fused_scores[:5]), 1):
+            intent_tag = f" [{art.intent}]" if hasattr(art, 'intent') else ""
+            print(f"    {i}. {art.qa_id:8s}  rrf={score:6.4f}{intent_tag}  Q: {art.question[:50]}")
+
+        # Intent rerank log
+        if result.retrieval.intent_rerank_log:
+            print()
+            print(f"  Intent rerank (query={result.retrieval.query_intent}):")
+            for qa_id, cand_intent, old_s, new_s, action in result.retrieval.intent_rerank_log[:8]:
+                symbol = "↑" if action == "boost" else ("↓" if action == "penalize" else "~")
+                print(f"    {qa_id:8s}  [{cand_intent:8s}]  {old_s:.4f} → {new_s:.4f}  {symbol} {action}")
+
+        # Reranker scores (skip_llm mode)
+        if result.retrieval.weighted_scores:
+            print()
+            print("  Cross-encoder reranker scores:")
+            rr_sorted = sorted(
+                result.retrieval.weighted_scores.items(),
+                key=lambda x: x[1], reverse=True
+            )
+            for i, (doc_id, score) in enumerate(rr_sorted[:5], 1):
+                art = _find_article(result, doc_id)
+                q_preview = art.question[:50] if art else "?"
+                marker = " ⭐" if i == 1 else ""
+                print(f"    {i}. {doc_id:8s}  score={score:6.4f}  Q: {q_preview}{marker}")
+
+    # ── Generation ──
+    if result.generation:
+        print()
+        print("─" * 70)
+        print("  GENERATION (LLM)")
+        print("─" * 70)
+        g = result.generation
+        print(f"  LLM intent      : {g.llm_intent}")
+        print(f"  Context selected: {g.chosen_context_idx}")
+        print(f"  Finish reason   : {g.finish_reason}")
+        print(f"  Latency         : {g.latency_s*1000:.0f}ms")
+        print(f"  Tokens          : {g.prompt_tokens} in / {g.completion_tokens} out")
+        print(f"  Raw LLM output  : {g.raw_text!r}")
+
+    # ── Final answer ──
+    print()
+    print("═" * 70)
+    print("  FINAL ANSWER")
+    print("═" * 70)
+    print(f"  Answer    : {result.answer_mr}")
+    print(f"  Source    : {result.chosen_qa_id or '(fallback)'}")
+    print(f"  Fallback  : {result.is_fallback}"
+          + (f" ({result.fallback_reason})" if result.is_fallback else ""))
+    print(f"  Confidence: {result.confidence_tier} (score: {result.top_fused_score:.4f})")
+    print(f"  Cached    : {result.cached}")
+    print(f"  Total latency: {result.latency_s*1000:.0f}ms")
+    print()
+    print("  Stage breakdown:")
+    for stage, t in result.stage_latencies_s.items():
+        bar = "█" * int(t * 1000 / 50)  # 1 char per 50ms
+        print(f"    {stage:20s} {t*1000:>7.1f}ms  {bar}")
+    print("═" * 70)
+
+
+def _find_article(result, qa_id):
+    """Helper: find article by qa_id in retrieval candidates."""
+    if result.retrieval:
+        for art in result.retrieval.candidates:
+            if art.qa_id == qa_id:
+                return art
+    return None
 
 
 def load_suite(path: str) -> List[Dict[str, Any]]:

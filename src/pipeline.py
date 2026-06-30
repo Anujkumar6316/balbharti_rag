@@ -79,6 +79,7 @@ class PipelineResult:
     top_fused_score: float
     cached: bool                    # True if served from LRU cache
     latency_s: float
+    query_intent: str = "UNKNOWN"   # rule-based intent (fast path)
     stage_latencies_s: Dict[str, float] = field(default_factory=dict)
     normalization: Optional[NormalizationResult] = None
     retrieval: Optional[RetrievalResult] = None
@@ -176,11 +177,10 @@ class RAGPipeline:
                 t_start=t_start,
                 normalization=norm,
                 top_fused_score=0.0,
+                query_intent="UNKNOWN",
             )
 
         # ---- 1b. Fuzzy spell correction ----
-        # Fix STT/typo drift against KB vocab BEFORE any downstream use.
-        # This ensures cache, retrieve, reranker all see the same corrected query.
         t0 = time.perf_counter()
         from .query_expand import fuzzy_correct
         corrected_text = fuzzy_correct(norm.cleaned, self.retriever._kb_vocab, max_dist=1)
@@ -189,9 +189,17 @@ class RAGPipeline:
                 "Query fuzzy-corrected: %r → %r",
                 norm.cleaned, corrected_text,
             )
-            # Update norm so the entire downstream pipeline uses the corrected text
             norm.cleaned = corrected_text
         stages["fuzzy_correct"] = time.perf_counter() - t0
+
+        # ---- 1c. Intent extraction (rule-based, ~5ms) ----
+        # Fast path. The LLM will also output intent as part of the combined
+        # call, but rules give us instant intent for retrieval-stage reranking.
+        t0 = time.perf_counter()
+        from .query_intent import extract_intent
+        query_intent = extract_intent(norm.cleaned)
+        stages["intent_extract"] = time.perf_counter() - t0
+        logger.info("Query intent (rules): %s for %r", query_intent, norm.cleaned[:80])
 
         # ---- 2. Cache lookup ----
         cache_key = norm.cleaned
@@ -217,6 +225,7 @@ class RAGPipeline:
                 normalization=norm,
                 top_fused_score=0.0,
                 retrieval=retrieval,
+                query_intent=query_intent,
             )
 
         # ---- 4. CRAG-lite confidence gate ----
@@ -231,6 +240,7 @@ class RAGPipeline:
                 normalization=norm,
                 retrieval=retrieval,
                 top_fused_score=top_score,
+                query_intent=query_intent,
             )
 
         # ---- 5. Score-weighted selection (skip LLM) ----
@@ -248,6 +258,7 @@ class RAGPipeline:
                     normalization=norm,
                     retrieval=retrieval,
                     top_fused_score=top_score,
+                    query_intent=query_intent,
                 )
             best_article = self.retriever.articles_by_id[best_id]
             stages["generate"] = 0.0
@@ -261,6 +272,7 @@ class RAGPipeline:
                 top_fused_score=top_score,
                 cached=False,
                 latency_s=time.perf_counter() - t_start,
+                query_intent=query_intent,
                 stage_latencies_s=stages,
                 normalization=norm,
                 retrieval=retrieval,
@@ -297,6 +309,7 @@ class RAGPipeline:
                 normalization=norm,
                 retrieval=retrieval,
                 top_fused_score=top_score,
+                query_intent=query_intent,
             )
         stages["generate"] = time.perf_counter() - t0
 
@@ -310,6 +323,7 @@ class RAGPipeline:
                 retrieval=retrieval,
                 top_fused_score=top_score,
                 generation=gen,
+                query_intent=query_intent,
             )
 
         # ---- 8. Success — build result ----
@@ -327,6 +341,7 @@ class RAGPipeline:
             top_fused_score=top_score,
             cached=False,
             latency_s=time.perf_counter() - t_start,
+            query_intent=query_intent,
             stage_latencies_s=stages,
             normalization=norm,
             retrieval=retrieval,
@@ -360,6 +375,7 @@ class RAGPipeline:
         retrieval: Optional[RetrievalResult] = None,
         generation: Optional[GenerationResult] = None,
         top_fused_score: float = 0.0,
+        query_intent: str = "UNKNOWN",
     ) -> PipelineResult:
         """Build a fallback result."""
         result = PipelineResult(
@@ -372,6 +388,7 @@ class RAGPipeline:
             top_fused_score=top_fused_score,
             cached=False,
             latency_s=time.perf_counter() - t_start,
+            query_intent=query_intent,
             stage_latencies_s=stage_latencies_s,
             normalization=normalization,
             retrieval=retrieval,

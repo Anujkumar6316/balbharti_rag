@@ -39,6 +39,8 @@ class RetrievalResult:
     bm25_scores: Dict[str, float]     # raw BM25 scores for top docs
     dense_scores: Dict[str, float]    # raw dense scores for top docs
     weighted_scores: Dict[str, float] = field(default_factory=dict)  # score-weighted fusion results
+    intent_rerank_log: list = field(default_factory=list)  # debug: (qa_id, intent, old_score, new_score, action)
+    query_intent: str = "UNKNOWN"
 
 
 class HybridRetriever:
@@ -122,10 +124,34 @@ class HybridRetriever:
             top_k_shortlist=top_k,
         )
 
-        # 4. Pick top-K candidates
-        top_doc_ids = fusion.ranked_doc_ids[:top_k]
-        top_scores = fusion.fused_scores[:top_k]
-        candidates = [self.articles_by_id[did] for did in top_doc_ids if did in self.articles_by_id]
+        # 4. Pick top-K candidates (use a wider pool so intent rerank has room)
+        pool_mult = cfg["retrieval"]["intent"]["pool_multiplier"]
+        pool_size = min(top_k * pool_mult, len(fusion.ranked_doc_ids))
+        pool_doc_ids = fusion.ranked_doc_ids[:pool_size]
+        pool_scores = fusion.fused_scores[:pool_size]
+        pool_candidates = [self.articles_by_id[did] for did in pool_doc_ids if did in self.articles_by_id]
+
+        # 5. Intent-aware reranking
+        from .query_intent import extract_intent, rerank_by_intent
+        query_intent = extract_intent(query)
+        intent_log = []
+        if query_intent != "UNKNOWN" and pool_candidates:
+            pool_candidates, pool_scores, intent_log = rerank_by_intent(
+                pool_candidates,
+                pool_scores,
+                query_intent,
+                match_boost=cfg["retrieval"]["intent"]["match_boost"],
+                mismatch_penalty=cfg["retrieval"]["intent"]["mismatch_penalty"],
+            )
+            logger.info(
+                "Intent rerank: query_intent=%s, top=%s",
+                query_intent,
+                getattr(pool_candidates[0], "qa_id", "?") if pool_candidates else "NONE",
+            )
+
+        # 6. Keep top-K after intent rerank
+        candidates = pool_candidates[:top_k]
+        top_scores = pool_scores[:top_k]
 
         latency = time.perf_counter() - t0
 
@@ -138,4 +164,6 @@ class HybridRetriever:
             latency_s=latency,
             bm25_scores=dict(bm25_top),
             dense_scores=dict(dense_top),
+            intent_rerank_log=intent_log,
+            query_intent=query_intent,
         )

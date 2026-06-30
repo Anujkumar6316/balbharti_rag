@@ -8,14 +8,16 @@
 # ---------- llama-server endpoint (OpenAI-compatible) ----------
 llm:
   base_url: "http://127.0.0.1:8080/v1"
-  api_key: "not-needed"           # llama-server ignores this
-  model:   "qwen3-0.8b-instruct"  # name as registered in llama-server
-  # Generation params (tuned for factual RAG answers)
-  temperature: 0.1
+  api_key: "not-needed"
+  model:   "qwen3-0.8b-instruct"
+  # Generation params — tuned for combined intent+selection call
+  # max_tokens=15 is enough for "हेतू: WHY\nसंदर्भ: 1" (~8 tokens)
+  # NEVER use max_tokens > 20 for selection mode — it causes 8-10s latency
+  temperature: 0.0               # deterministic for classification
   top_p: 0.9
-  max_tokens: 220                 # ~3-4 sentences in Marathi
-  timeout_s: 30.0                  # hard timeout — fail fast on Pi
-  retries: 1                      # one retry on transient failure
+  max_tokens: 15                 # combined intent + context selection
+  timeout_s: 30.0
+  retries: 1
   retry_backoff_ms: 250
 
 # ---------- Embedder (MuRIL small, ~110MB) ----------
@@ -92,6 +94,16 @@ retrieval:
   confidence:
     threshold_low: 0.011           # below this = neither retriever found it strongly
     threshold_high: 0.025          # above this = both retrievers agree top-K
+
+  # Intent-aware retrieval (root-cause fix for intent-blind retrieval)
+  intent:
+    enabled: true
+    match_boost: 1.5               # candidates with matching intent get score × 1.5
+    mismatch_penalty: 0.3          # candidates with mismatching intent get score × 0.3
+    pool_multiplier: 2             # pull top_k × N candidates before intent rerank
+    # Rules first (5ms). LLM intent is extracted as part of the combined
+    # LLM call (intent + context selection in one response), NOT as a
+    # separate call. This keeps latency at ~300-500ms total.
 
 # ---------- Cache ----------
 cache:
