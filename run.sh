@@ -45,6 +45,22 @@ case "$MODE" in
         PORT="${PORT:-8000}"
         python3 scripts/serve.py --host 0.0.0.0 --port "$PORT" "$@"
         ;;
+    tts|speak)
+        echo "Speaking Marathi text with Google TTS..."
+        shift
+        uv run python3 -c "
+import sys
+sys.path.insert(0, '.')
+from src.tts import synthesize_and_play
+text = ' '.join(sys.argv[1:])
+if not text:
+    print('Usage: ./run.sh tts \"मराठी टेक्स्ट\"')
+    sys.exit(1)
+print(f'Speaking: {text}')
+timing = synthesize_and_play(text)
+print(f'Synthesis: {timing[\"synthesis_ms\"]}ms')
+" "$@"
+        ;;
     smoke|smoke-test)
         echo "Running offline smoke test (mock embedder + mock LLM)..."
         shift
@@ -68,6 +84,7 @@ case "$MODE" in
         echo "  eval         Run retrieval / full-pipeline evaluation"
         echo "  serve        Start FastAPI HTTP server (/answer endpoint)"
         echo "  smoke        Offline smoke test (mock embedder + mock LLM)"
+        echo "  tts          Speak Marathi text using TTS (e.g. \"./run.sh tts नमस्कार\")"
         echo "  test         Run pytest unit tests"
         echo "  help         Show this help message"
         echo ""
@@ -75,6 +92,7 @@ case "$MODE" in
         echo "  \"<query>\"              One-shot query, print answer and exit"
         echo "  --repl                  Interactive REPL mode (default if no query)"
         echo "  --suite <path>          Run queries from a YAML suite (batch mode)"
+        echo "  --speak                 Speak the answer using Marathi TTS"
         echo "  --verbose, -v           Show stage latencies + retrieval debug"
         echo "  --config <path>         Override config.yaml path"
         echo ""
@@ -101,7 +119,10 @@ case "$MODE" in
         echo "  ./run.sh rag                                                  # Interactive REPL"
         echo "  ./run.sh rag \"प्रवेश कशी घ्यायची\"                                # One-shot query"
         echo "  ./run.sh rag --repl --verbose                                 # Verbose REPL"
+        echo "  ./run.sh rag --speak \"प्रवेश कशी घ्यायची\"                        # One-shot + TTS"
+        echo "  ./run.sh rag --repl --speak                                   # REPL + TTS"
         echo "  ./run.sh rag --suite tests/rag_suite.yaml                     # Run regression suite"
+        echo "  ./run.sh tts \"नमस्कार\"                                        # Speak Marathi text"
         echo "  ./run.sh build-index --smoke                                  # Build + smoke test"
         echo "  ./run.sh build-index --rebuild                                # Force rebuild"
         echo "  ./run.sh eval --mode retrieval --mock                         # Offline retrieval eval"
@@ -122,12 +143,14 @@ case "$MODE" in
         echo "Pipeline:"
         echo "  STT text → Normalize → [BM25 + Dense MuRIL] → RRF fusion"
         echo "           → CRAG-lite gate → Qwen3-0.8B → Devanagari Marathi answer"
+        echo "           → TTS (gTTS Marathi, --speak flag)"
         echo ""
         echo "Prerequisites (one-time setup):"
         echo "  1. pip install -r requirements.txt"
         echo "  2. Download Qwen3-0.8B-Instruct GGUF to ~/models/"
         echo "  3. Start llama-server on port 8080"
         echo "  4. ./run.sh build-index --smoke    # build + verify"
+        echo "  5. TTS: pip install gtts (or piper-tts for offline)"
         echo "  See README.md for full setup instructions."
         echo ""
         ;;

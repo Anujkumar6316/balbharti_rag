@@ -301,6 +301,11 @@ def main():
         help="Skip LLM call, use score-weighted fusion to select best context",
     )
     parser.add_argument(
+        "--speak",
+        action="store_true",
+        help="Speak the answer using TTS (Marathi voice)",
+    )
+    parser.add_argument(
         "--config",
         default=None,
         help="Override config.yaml path",
@@ -327,10 +332,31 @@ def main():
     if args.query:
         result = pipeline.answer(args.query, skip_llm=skip_llm)
         print_result(result, verbose=args.verbose, articles_by_id=pipeline.retriever.articles_by_id)
+        if args.speak and not result.is_fallback and result.answer_mr:
+            try:
+                from src.tts import synthesize_and_play
+                print("\n  Speaking...")
+                timing = synthesize_and_play(result.answer_mr)
+                if args.verbose:
+                    print(f"  TTS synthesis: {timing['synthesis_ms']}ms")
+            except Exception as e:
+                print(f"\n  TTS error: {e}")
         return
 
     # Default: REPL mode
     print("\nInteractive REPL. Type a query and press Enter. Empty line to quit.\n")
+
+    # Pre-load TTS if --speak is set
+    if args.speak:
+        try:
+            from src.tts import get_tts
+            print("  Loading Marathi TTS (first call ~200ms)...")
+            get_tts()
+            print("  TTS ready.")
+        except Exception as e:
+            print(f"  TTS unavailable: {e}")
+            args.speak = False
+
     while True:
         try:
             query = input("Q> ").strip()
@@ -342,6 +368,16 @@ def main():
             break
         result = pipeline.answer(query, skip_llm=skip_llm)
         print_result(result, verbose=args.verbose, articles_by_id=pipeline.retriever.articles_by_id)
+
+        if args.speak and not result.is_fallback and result.answer_mr:
+            try:
+                from src.tts import synthesize_and_play
+                print("\n  Speaking...")
+                timing = synthesize_and_play(result.answer_mr)
+                if args.verbose:
+                    print(f"  TTS synthesis: {timing['synthesis_ms']}ms")
+            except Exception as e:
+                print(f"\n  TTS error: {e}")
 
 
 if __name__ == "__main__":
