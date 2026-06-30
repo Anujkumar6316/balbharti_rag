@@ -75,7 +75,7 @@ retrieval:
   # Cross-encoder reranker (used when --skip-llm is set)
   reranker:
     model_id: "Alibaba-NLP/gte-multilingual-reranker-base"
-    threshold: 1.0
+    threshold: 0.35               # gte reranker outputs sigmoid scores ~0.2-0.8
 
   # Top-K shortlist sent to LLM / reranker
   top_k: 5
@@ -100,10 +100,36 @@ retrieval:
     enabled: true
     match_boost: 1.5               # candidates with matching intent get score × 1.5
     mismatch_penalty: 0.3          # candidates with mismatching intent get score × 0.3
-    pool_multiplier: 2             # pull top_k × N candidates before intent rerank
+    pool_multiplier: 6             # pull top_k × N candidates before intent rerank
     # Rules first (5ms). LLM intent is extracted as part of the combined
     # LLM call (intent + context selection in one response), NOT as a
     # separate call. This keeps latency at ~300-500ms total.
+
+# ---------- Query validation gate (score-based, zero hardcoded words) ----------
+# Two-stage gate using structural checks + retrieval scores.
+# No word lists — adapts automatically to any KB content.
+query_validation:
+  enabled: true
+
+  # Stage 1: Structural checks (before retrieval, ~0.5ms)
+  structural:
+    min_length: 3                 # chars — reject "a", "ok"
+    max_length: 200               # chars — reject essays pasted as queries
+    max_token_repeat_ratio: 0.6   # reject "hello hello hello" (60%+ same token)
+    max_missing_token_ratio: 0.4  # reject if >40% query tokens absent from entire KB
+                                  # catches anachronisms ("aircraft") without hardcoded lists
+
+  # Stage 2: Score-based checks (after retrieval, ~0ms — scores already computed)
+  # These adapt automatically as KB grows — no manual tuning per subject.
+  score:
+    min_dense_cosine: 0.35        # below = query doesn't semantically match any KB doc
+                                  # catches gibberish ("asdfghjkl") + OOS English ("Apple founder")
+    min_bm25_raw: 3.0             # below = no keyword overlap with KB
+                                  # catches queries with no recognizable terms
+    min_reranker_score: 0.35      # below = cross-encoder not confident
+                                  # gte outputs ~0.2-0.8; threshold at 0.35 catches low-match
+    min_token_coverage: 0.5       # below = query entities absent from all candidate texts
+                                  # catches entity mismatch ("Sambhaji"→"Shivaji") + anachronisms
 
 # ---------- Cache ----------
 cache:
@@ -117,6 +143,25 @@ cache:
 pipeline:
   # Strict no-hallucination: if LLM says "I don't know", respect it
   respect_llm_dont_know: true
+
+  # Generative-LLM context selection (src/generate.py) — OFF by default.
+  #
+  # Root-cause note: with intent-aware reranking (retrieval.intent) and the
+  # CRAG-lite gate now scoring the POST-rerank top candidate (see
+  # src/pipeline.py), retrieval.candidates[0] is already a reliable,
+  # well-vetted pick before any LLM is involved. In practice the small LLM
+  # (Qwen3-0.8B) used for "intent + context selection" was observed to
+  # output "संदर्भ: 1" (pick context 1) on every single query regardless of
+  # whether context 1 was actually relevant — i.e. it added no discriminative
+  # value, while costing 6-11s per query (vs ~50-150ms for retrieval alone).
+  # The final answer text is always served verbatim from the KB either way
+  # (no generation happens), so this step was pure latency with no accuracy
+  # benefit and a (small) extra failure surface from response parsing.
+  #
+  # Set this to true only if you've validated, on your own LLM setup, that
+  # it actually changes selections in a way that improves accuracy.
+  llm_selection_enabled: false
+
   # Max wall-clock budget for the whole pipeline (seconds)
   latency_budget_s: 5.0
   # If pipeline exceeds budget, return fallback immediately

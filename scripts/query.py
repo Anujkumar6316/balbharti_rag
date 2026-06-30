@@ -25,7 +25,7 @@ from src.config import load_config
 from src.pipeline import RAGPipeline
 
 
-def print_result(result, verbose=False):
+def print_result(result, verbose=False, articles_by_id=None):
     """Pretty-print pipeline result. Verbose mode shows full debug trace."""
     print()
     if not verbose:
@@ -78,7 +78,7 @@ def print_result(result, verbose=False):
             key=lambda x: x[1], reverse=True
         )[:5]
         for i, (doc_id, score) in enumerate(bm25_sorted, 1):
-            art = _find_article(result, doc_id)
+            art = _find_article(result, doc_id, articles_by_id)
             q_preview = art.question[:60] if art else "?"
             print(f"    {i}. {doc_id:8s}  score={score:6.3f}  Q: {q_preview}")
 
@@ -89,7 +89,7 @@ def print_result(result, verbose=False):
             key=lambda x: x[1], reverse=True
         )[:5]
         for i, (doc_id, score) in enumerate(dense_sorted, 1):
-            art = _find_article(result, doc_id)
+            art = _find_article(result, doc_id, articles_by_id)
             q_preview = art.question[:60] if art else "?"
             print(f"    {i}. {doc_id:8s}  score={score:6.3f}  Q: {q_preview}")
 
@@ -117,7 +117,7 @@ def print_result(result, verbose=False):
                 key=lambda x: x[1], reverse=True
             )
             for i, (doc_id, score) in enumerate(rr_sorted[:5], 1):
-                art = _find_article(result, doc_id)
+                art = _find_article(result, doc_id, articles_by_id)
                 q_preview = art.question[:50] if art else "?"
                 marker = " ⭐" if i == 1 else ""
                 print(f"    {i}. {doc_id:8s}  score={score:6.4f}  Q: {q_preview}{marker}")
@@ -156,12 +156,17 @@ def print_result(result, verbose=False):
     print("═" * 70)
 
 
-def _find_article(result, qa_id):
-    """Helper: find article by qa_id in retrieval candidates."""
+def _find_article(result, qa_id, articles_by_id=None):
+    """Helper: find article by qa_id, preferring retrieval candidates
+    (post-rerank) but falling back to the full corpus map so raw BM25/Dense
+    debug listings (which span the whole index, not just the narrowed
+    candidate pool) can still resolve their question text."""
     if result.retrieval:
         for art in result.retrieval.candidates:
             if art.qa_id == qa_id:
                 return art
+    if articles_by_id is not None:
+        return articles_by_id.get(qa_id)
     return None
 
 
@@ -321,7 +326,7 @@ def main():
 
     if args.query:
         result = pipeline.answer(args.query, skip_llm=skip_llm)
-        print_result(result, verbose=args.verbose)
+        print_result(result, verbose=args.verbose, articles_by_id=pipeline.retriever.articles_by_id)
         return
 
     # Default: REPL mode
@@ -336,7 +341,7 @@ def main():
             print("Bye.")
             break
         result = pipeline.answer(query, skip_llm=skip_llm)
-        print_result(result, verbose=args.verbose)
+        print_result(result, verbose=args.verbose, articles_by_id=pipeline.retriever.articles_by_id)
 
 
 if __name__ == "__main__":

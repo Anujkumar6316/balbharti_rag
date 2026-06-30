@@ -109,10 +109,16 @@ class HybridRetriever:
             for doc_id, score in zip(doc_ids, scores):
                 if doc_id not in bm25_scores_raw or score > bm25_scores_raw[doc_id]:
                     bm25_scores_raw[doc_id] = score
-        bm25_top = sorted(bm25_scores_raw.items(), key=lambda x: x[1], reverse=True)[:min(self.bm25.n_docs, 30)]
+        # NOTE: previously capped at min(n_docs, 30) before fusion. At this KB
+        # size (hundreds of docs, not millions) that cap is pure recall loss
+        # for no latency benefit — a correct candidate ranked just outside the
+        # top 30 by one retriever is invisible to RRF fusion and to intent
+        # rerank, no matter how well-tuned those stages are. Rank the full
+        # corpus instead; truncation happens later via pool_size / top_k.
+        bm25_top = sorted(bm25_scores_raw.items(), key=lambda x: x[1], reverse=True)[:self.bm25.n_docs]
 
         # 2. Dense retrieval
-        dense_top = self.dense.top_k(query, k=min(self.dense.n_docs, 30))
+        dense_top = self.dense.top_k(query, k=self.dense.n_docs)
 
         # 3. RRF fusion
         fusion = reciprocal_rank_fusion(

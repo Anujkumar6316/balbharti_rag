@@ -94,6 +94,10 @@ def extract_intent(text: str) -> str:
     """Extract intent from Marathi question via rules. ~5ms.
 
     Returns: WHY/WHAT/HOW/WHEN/WHO/WHERE/HOW_MUCH/YES_NO/UNKNOWN
+
+    Key disambiguation:
+      - "ka" (का) as a trailing word → YES_NO suffix (e.g. "janmale ka?")
+      - "ka" (का) at start/middle of sentence → WHY question word (e.g. "ka sthapla?")
     """
     if not text or not text.strip():
         return "UNKNOWN"
@@ -101,9 +105,30 @@ def extract_intent(text: str) -> str:
     lower = text.lower()
     lower = re.sub(r"\s+", " ", lower)
 
+    # 1. Check YES_NO phrases first (existing patterns like "hote ka", "aahe ka")
     for keyword, intent in _INTENT_KEYWORDS:
+        if intent != "YES_NO":
+            continue
         if len(keyword) <= 4:
-            # Word-boundary match for short keywords
+            pattern = r"(?<!\w)" + re.escape(keyword) + r"(?!\w)"
+            if re.search(pattern, lower):
+                return intent
+        else:
+            if keyword in lower:
+                return intent
+
+    # 2. Position-based YES_NO: trailing "ka" → yes/no suffix, not "why"
+    # In Marathi, yes/no questions end with "ka" suffixed to the verb
+    # ("janmale ka?", "zala ka?"), while WHY uses "ka" as a standalone
+    # question word at the start or middle of the sentence ("ka sthapla?").
+    if re.search(r"\b(ka|kaa|का)\s*[।\u0964\u0965!?.,;:\s]*$", lower):
+        return "YES_NO"
+
+    # 3. Check all remaining intents
+    for keyword, intent in _INTENT_KEYWORDS:
+        if intent == "YES_NO":
+            continue
+        if len(keyword) <= 4:
             pattern = r"(?<!\w)" + re.escape(keyword) + r"(?!\w)"
             if re.search(pattern, lower):
                 return intent

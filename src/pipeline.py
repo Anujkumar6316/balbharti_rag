@@ -138,7 +138,9 @@ class RAGPipeline:
         self._cache = LRUCache(max_size=cfg["cache"]["max_size"])
         self._fallback_msg = cfg["pipeline"]["fallback_message_mr"]
         self._threshold_low = cfg["retrieval"]["confidence"]["threshold_low"]
+        self._threshold_high = cfg["retrieval"]["confidence"]["threshold_high"]
         self._respect_llm_dont_know = cfg["pipeline"]["respect_llm_dont_know"]
+        self._llm_selection_enabled = cfg["pipeline"].get("llm_selection_enabled", False)
         self._latency_budget_s = cfg["pipeline"]["latency_budget_s"]
 
     @classmethod
@@ -201,6 +203,25 @@ class RAGPipeline:
         stages["intent_extract"] = time.perf_counter() - t0
         logger.info("Query intent (rules): %s for %r", query_intent, norm.cleaned[:80])
 
+        # ---- 1d. Structural validation gate (Stage 1, pre-retrieval) ----
+        t0 = time.perf_counter()
+        from .query_validate import validate_structure, validate_scores
+        cfg = get_config()
+        val_cfg = cfg.get("query_validation", {})
+        is_valid, reject_reason = validate_structure(
+            norm.cleaned, val_cfg, kb_vocab=self.retriever._kb_vocab,
+        )
+        stages["validate_structure"] = time.perf_counter() - t0
+        if not is_valid:
+            logger.info("Query rejected (structural): %s for %r", reject_reason, norm.cleaned[:80])
+            return self._fallback(
+                reason=reject_reason,
+                stage_latencies_s=stages,
+                t_start=t_start,
+                normalization=norm,
+                query_intent=query_intent,
+            )
+
         # ---- 2. Cache lookup ----
         cache_key = norm.cleaned
         if self._cache_enabled:
@@ -229,8 +250,24 @@ class RAGPipeline:
             )
 
         # ---- 4. CRAG-lite confidence gate ----
-        top_score = retrieval.fusion.top_score
-        tier = retrieval.fusion.confidence_tier
+        # NOTE: retrieval.fusion.top_score / confidence_tier are computed
+        # BEFORE intent-aware reranking (see retrieve.py step 3 vs step 5)
+        # and are kept only for debug display of the raw RRF ranking.
+        # Grading confidence on that stale score is wrong: intent rerank can
+        # (and routinely does) demote the pre-rerank #1 candidate by 3x+ for
+        # an intent mismatch, or promote a candidate that was nowhere near
+        # the top. If we gate on the stale score we can answer "high
+        # confidence" using a candidate that intent rerank just penalized
+        # into irrelevance (e.g. answering a YES_NO-shaped QA pair for a WHY
+        # question). The gate must use the score of the candidate that will
+        # actually be served, i.e. the post-rerank top of retrieval.candidates.
+        top_score = retrieval.fused_scores[0] if retrieval.fused_scores else 0.0
+        if top_score >= self._threshold_high:
+            tier = "high"
+        elif top_score >= self._threshold_low:
+            tier = "medium"
+        else:
+            tier = "low"
 
         if tier == "low":
             return self._fallback(
@@ -249,6 +286,36 @@ class RAGPipeline:
                 self._reranker = Reranker()
             best_id, best_score, all_scores = self._reranker.select(norm.cleaned, retrieval.candidates)
             retrieval.weighted_scores = {c.qa_id: s for c, s in zip(retrieval.candidates, all_scores)}
+
+            # ---- 5a. Score-based validation (Stage 2, post-retrieval) ----
+            # Use raw scores (not RRF) as the gate — they carry absolute signal.
+            dense_top = max(retrieval.dense_scores.values()) if retrieval.dense_scores else 0.0
+            bm25_top = max(retrieval.bm25_scores.values()) if retrieval.bm25_scores else 0.0
+            from .query_validate import compute_token_coverage
+            token_coverage = compute_token_coverage(norm.cleaned, retrieval.candidates)
+            t0 = time.perf_counter()
+            is_valid, reject_reason = validate_scores(
+                dense_top_score=dense_top,
+                bm25_top_score=bm25_top,
+                reranker_score=best_score,
+                token_coverage=token_coverage,
+                cfg=val_cfg,
+            )
+            stages["validate_scores"] = time.perf_counter() - t0
+            if not is_valid:
+                logger.info(
+                    "Query rejected (scores): %s | dense=%.3f bm25=%.3f reranker=%.3f coverage=%.2f",
+                    reject_reason, dense_top, bm25_top, best_score, token_coverage,
+                )
+                return self._fallback(
+                    reason=reject_reason,
+                    stage_latencies_s=stages,
+                    t_start=t_start,
+                    normalization=norm,
+                    retrieval=retrieval,
+                    top_fused_score=top_score,
+                    query_intent=query_intent,
+                )
 
             if not best_id or best_id not in self.retriever.articles_by_id:
                 return self._fallback(
@@ -293,6 +360,44 @@ class RAGPipeline:
             return result
 
         # ---- 6. Generate (single LLM call) ----
+        # Off by default (see config.yaml: pipeline.llm_selection_enabled).
+        # Skips straight to serving retrieval.candidates[0] verbatim, which
+        # is now a reliable pick thanks to the widened intent-rerank pool
+        # and the post-rerank confidence gate above — without the 6-11s
+        # LLM round trip this step previously cost on every single query.
+        if not self._llm_selection_enabled:
+            best_article = retrieval.candidates[0]
+            stages["generate"] = 0.0
+            result = PipelineResult(
+                answer_mr=best_article.answer_mr,
+                is_fallback=False,
+                fallback_reason="",
+                chosen_qa_id=best_article.qa_id,
+                chosen_context_idx=1,
+                confidence_tier=tier,
+                top_fused_score=top_score,
+                cached=False,
+                latency_s=time.perf_counter() - t_start,
+                query_intent=query_intent,
+                stage_latencies_s=stages,
+                normalization=norm,
+                retrieval=retrieval,
+                generation=None,
+            )
+            if self._cache_enabled:
+                self._cache.put(cache_key, result)
+            logger.info(
+                "Pipeline success (direct, no LLM)",
+                extra={
+                    "query": norm.cleaned[:80],
+                    "qa_id": best_article.qa_id,
+                    "tier": tier,
+                    "top_score": round(top_score, 4),
+                    "latency_s": round(result.latency_s, 3),
+                },
+            )
+            return result
+
         t0 = time.perf_counter()
         try:
             gen = generate_answer(
@@ -366,6 +471,12 @@ class RAGPipeline:
         return result
 
 
+    # Fallback reasons that map to "rejected" (definitive score/structural rejection)
+    _SCORE_FALLBACKS = frozenset({
+        "low_dense_cosine", "low_bm25", "low_reranker",
+        "low_token_coverage", "vocab_mismatch", "entity_mismatch",
+    })
+
     def _fallback(
         self,
         reason: str,
@@ -377,14 +488,28 @@ class RAGPipeline:
         top_fused_score: float = 0.0,
         query_intent: str = "UNKNOWN",
     ) -> PipelineResult:
-        """Build a fallback result."""
+        """Build a fallback result with correct confidence tier.
+
+        Never copies the pre-rerank RRF confidence tier when falling back.
+        Instead assigns a meaningful tier based on the rejection reason:
+          - Score/validation failures → "rejected"
+          - Low confidence / errors → "low"
+          - Structural rejections → "rejected"
+        """
+        if reason in self._SCORE_FALLBACKS:
+            confidence_tier = "rejected"
+        elif reason in ("low_confidence_crag", "no_candidates", "llm_dont_know", "llm_error"):
+            confidence_tier = "low"
+        else:
+            confidence_tier = "rejected"
+
         result = PipelineResult(
             answer_mr=self._fallback_msg,
             is_fallback=True,
             fallback_reason=reason,
             chosen_qa_id="",
             chosen_context_idx=0,
-            confidence_tier=retrieval.fusion.confidence_tier if retrieval else "unknown",
+            confidence_tier=confidence_tier,
             top_fused_score=top_fused_score,
             cached=False,
             latency_s=time.perf_counter() - t_start,
